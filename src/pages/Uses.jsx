@@ -11,10 +11,9 @@ export default function Uses() {
   ];
 
   return (
-    <div className="animate-fade-in text-left max-w-5xl mx-auto flex gap-12 mt-12 mb-24 relative">
+    <div className="animate-fade-in text-left max-w-5xl mx-auto flex flex-col md:flex-row md:gap-12 mt-4 md:mt-12 gap-12 mt-12 mb-24 relative">
       
-      {/* Left Column: ScrollSpy Navigation */}
-      <aside className="w-48 shrink-0">
+      <aside className="hidden md:block w-48 shrink-0">
         <ScrollSpy sections={sections} />
       </aside>
 

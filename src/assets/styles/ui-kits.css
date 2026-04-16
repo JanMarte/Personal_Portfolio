@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: var(--bg-primary);
+  --color-text: var(--text-primary);
+  --color-accent: var(--accent-color);
+  --color-cta: var(--cta-color); /* Added specific CTA color */
+}
+
 :root {
-  /* Cyber Purple Default Theme (Dark) */
-  --bg-primary: #0a0a0a;
-  --text-primary: #f3f4f6;
-  --accent-color: #9333EA;
+  /* High-Contrast Dark Theme */
+  --bg-primary: #18181b;       /* A super dark, rich grey (Zinc 900) instead of pure black */
+  --text-primary: #f8fafc;     /* Crisp, cool white for maximum readability */
+  --accent-color: #c084fc;     /* Bright Lilac - Highly visible against dark grey */
+  --cta-color: #a855f7;        /* Slightly deeper purple for solid buttons to maintain white text contrast */
   
   /* Card specific variables */
-  --card-bg: rgba(17, 24, 39, 0.4); /* Subtle dark glass */
-  --card-border: rgba(255, 255, 255, 0.1);
-  --overlay-bg: rgba(0, 0, 0, 0.8); /* Dark hover overlay */
-  --btn-bg: rgba(31, 41, 55, 0.8); /* Dark icon button */
+  --card-bg: rgba(39, 39, 42, 0.4); /* Lighter glass for dark grey background */
+  --card-border: rgba(255, 255, 255, 0.15); /* Slightly more visible border */
+  --overlay-bg: rgba(24, 24, 27, 0.9); /* Dark grey hover overlay */
+  --btn-bg: rgba(63, 63, 70, 0.8); /* Noticeable dark grey icon button */
 }
 
 [data-theme="light"] {
-  --bg-primary: #f9fafb;
-  --text-primary: #111827;
-  --accent-color: #7e22ce;
+  /* Anti-Glare Light Theme */
+  --bg-primary: #faf9f6;       /* Warm paper/off-white to reduce eye strain */
+  --text-primary: #1c1917;     /* Soft black/dark stone instead of harsh #000000 */
+  --accent-color: #7e22ce;     /* Deep, highly legible purple for text on light backgrounds */
+  --cta-color: #9333ea;        /* Slightly more vibrant purple for buttons */
   
   /* Card specific variables */
-  --card-bg: rgba(255, 255, 255, 0.8); /* Clean white glass */
-  --card-border: rgba(0, 0, 0, 0.1);
-  --overlay-bg: rgba(255, 255, 255, 0.85); /* Premium frosted light overlay */
-  --btn-bg: rgba(243, 244, 246, 0.8); /* Light icon button */
+  --card-bg: rgba(255, 255, 255, 0.6); 
+  --card-border: rgba(0, 0, 0, 0.12);
+  --overlay-bg: rgba(250, 249, 246, 0.9); /* Frosted paper overlay */
+  --btn-bg: rgba(228, 228, 231, 0.8);
 }

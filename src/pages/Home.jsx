@@ -15,7 +15,7 @@ export default function Home() {
     <div className="animate-fade-in text-left">
       {/* Hero Section */}
       <section className="mt-12 mb-24 max-w-4xl">
-        <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold rounded-full border border-[var(--accent-color)] text-[var(--accent-color)] bg-[var(--accent-color)]/10 transition-all duration-300">
+        <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold rounded-full border border-[var(--accent-color)] text-[var(--accent-color)] bg-[var(--cta-color)]/10 transition-all duration-300">
           {t ? t.available : "🟢 Available for roles starting May 2026"}
         </div>
         
@@ -33,7 +33,7 @@ export default function Home() {
         </p>
 
         <div className="flex gap-4">
-          <Link to="/about" className="px-6 py-3 bg-[var(--accent-color)] text-white font-bold rounded shadow-lg shadow-[var(--accent-color)]/20 hover:scale-105 transition-transform">
+          <Link to="/about" className="px-6 py-3 bg-[var(--cta-color)] text-white font-bold rounded shadow-lg shadow-[var(--accent-color)]/20 hover:scale-105 transition-transform">
             {t ? t.whoAmI : "Who I Am"}
           </Link>
           <Link to="/resume" className="px-6 py-3 border border-[var(--card-border)] hover:border-[var(--accent-color)] rounded transition-colors bg-[var(--btn-bg)] font-bold">

@@ -49,7 +49,7 @@ export default function ProjectCard({ project }) {
       <div className="absolute inset-0 bg-[var(--overlay-bg)] backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-20">
         <Link 
           to={`/projects/${project.id}`} 
-          className="px-5 py-2 bg-[var(--accent-color)] text-white font-bold rounded shadow-lg shadow-[var(--accent-color)]/20 hover:scale-105 transition-transform"
+          className="px-5 py-2 bg-[var(--cta-color)] text-white font-bold rounded shadow-lg shadow-[var(--accent-color)]/20 hover:scale-105 transition-transform"
         >
           {/* Using tCard here fixes the error! */}
           {tCard ? tCard.viewArch : "View Architecture ↗"} 

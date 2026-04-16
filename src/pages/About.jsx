@@ -22,9 +22,9 @@ export default function About() {
   ];
 
   return (
-    <div className="animate-fade-in text-left max-w-5xl mx-auto flex gap-12 mt-12 mb-24 relative">
+    <div className="animate-fade-in text-left max-w-5xl mx-auto flex flex-col md:flex-row md:gap-12 mt-4 md:mt-12 gap-12 mt-12 mb-24 relative">
       
-      <aside className="w-48 shrink-0">
+      <aside className="hidden md:block w-48 shrink-0">
         <ScrollSpy sections={sections} />
       </aside>
 
@@ -69,8 +69,8 @@ export default function About() {
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--accent-color)] to-blue-500"></div>
             <h3 className="text-xl font-bold mb-2 flex items-center gap-3" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
               <span className="flex h-3 w-3 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent-color)] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-[var(--accent-color)]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--cta-color)] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-[var(--cta-color)]"></span>
               </span>
               {t ? "Actualmente Ejecutando" : "Currently Executing"}
             </h3>

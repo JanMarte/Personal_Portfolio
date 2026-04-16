@@ -43,9 +43,9 @@ export default function ProjectDeepDive() {
   ];
 
   return (
-    <div className="animate-fade-in text-left max-w-5xl mx-auto flex gap-12 mt-12 mb-24 relative">
+    <div className="animate-fade-in text-left max-w-5xl mx-auto flex flex-col md:flex-row md:gap-12 mt-4 md:mt-12 gap-12 mt-12 mb-24 relative">
       
-      <aside className="w-48 shrink-0">
+      <aside className="hidden md:block w-48 shrink-0">
         <Link to="/" className="flex items-center gap-2 text-sm font-bold opacity-70 hover:opacity-100 hover:text-[var(--accent-color)] transition-colors mb-8 pl-4">
           {labels.back}
         </Link>
@@ -54,11 +54,18 @@ export default function ProjectDeepDive() {
 
       <div className="flex-1 min-w-0 space-y-24">
         
+        {/* Page Header */}
         <div className="mb-12 border-b border-[var(--card-border)] pb-8 relative">
+          
+          {/* ADD THIS MOBILE ONLY BACK BUTTON */}
+          <Link to="/" className="md:hidden inline-flex items-center gap-2 text-sm font-bold opacity-70 hover:opacity-100 hover:text-[var(--accent-color)] transition-colors mb-6">
+            {labels.back}
+          </Link>
+
           <div className="absolute top-0 right-0 px-3 py-1 text-xs font-bold uppercase tracking-widest rounded bg-[var(--btn-bg)] border border-[var(--card-border)] text-[var(--accent-color)]">
             {project.status}
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 pr-24" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 pr-0 md:pr-24" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
             {displayTitle}
           </h1>
           
@@ -72,7 +79,7 @@ export default function ProjectDeepDive() {
 
           <div className="flex gap-4">
             {project.quickLinks?.live && project.quickLinks.live !== "#" && (
-              <a href={project.quickLinks.live} target="_blank" rel="noreferrer" className="px-6 py-2 bg-[var(--accent-color)] text-white font-bold rounded shadow-lg shadow-[var(--accent-color)]/20 hover:scale-105 transition-transform">
+              <a href={project.quickLinks.live} target="_blank" rel="noreferrer" className="px-6 py-2 bg-[var(--cta-color)] text-white font-bold rounded shadow-lg shadow-[var(--accent-color)]/20 hover:scale-105 transition-transform">
                 {labels.viewLive}
               </a>
             )}

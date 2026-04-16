@@ -24,8 +24,8 @@ export default function Footer() {
         {statusWidget.active && (
           <div className="flex items-start gap-4 bg-[var(--card-bg)] border border-[var(--card-border)] px-5 py-4 rounded-lg backdrop-blur-sm max-w-md w-full md:w-auto shadow-lg shadow-black/5">
             <span className="flex h-3 w-3 relative shrink-0 mt-1.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent-color)] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-[var(--accent-color)]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--cta-color)] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-[var(--cta-color)]"></span>
             </span>
             <div className="text-sm leading-relaxed min-w-0">
               <span className="font-bold opacity-90 block mb-1">

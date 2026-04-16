@@ -13,10 +13,9 @@ export default function Resume() {
   ];
 
   return (
-    <div className="animate-fade-in text-left max-w-5xl mx-auto flex gap-12 mt-12 mb-24 relative">
+    <div className="animate-fade-in text-left max-w-5xl mx-auto flex flex-col md:flex-row md:gap-12 mt-4 md:mt-12 gap-12 mt-12 mb-24 relative">
       
-      {/* Left Column: ScrollSpy Navigation */}
-      <aside className="w-48 shrink-0">
+      <aside className="hidden md:block w-48 shrink-0">
         <ScrollSpy sections={sections} />
       </aside>
 
@@ -36,7 +35,7 @@ export default function Resume() {
             <a 
               href="/Jan_Marte_Resume.pdf" 
               download 
-              className="px-4 py-2 text-sm bg-[var(--accent-color)] text-white font-bold rounded shadow-lg shadow-[var(--accent-color)]/20 hover:scale-105 transition-transform flex items-center gap-2"
+              className="px-4 py-2 text-sm bg-[var(--cta-color)] text-white font-bold rounded shadow-lg shadow-[var(--accent-color)]/20 hover:scale-105 transition-transform flex items-center gap-2"
             >
               Download PDF ↓
             </a>
@@ -75,7 +74,7 @@ export default function Resume() {
           {/* Technical Skills */}
           <section id="skills" className="scroll-mt-24">
             <h2 className="text-3xl font-bold mb-8 border-b border-[var(--card-border)] pb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>Technical Skills</h2>
-            <div className="grid grid-cols-1 gap-6 p-6 border border-[var(--card-border)] rounded-lg bg-gray-900/10 dark:bg-black/20">
+            <div className="grid grid-cols-1 gap-6 p-6 border border-[var(--card-border)] rounded-lg">
               {Object.entries(resume.skills).map(([category, skills]) => (
                 <div key={category}>
                   <span className="font-bold text-[var(--accent-color)] block mb-1">{category}:</span>
