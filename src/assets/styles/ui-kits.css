@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  /* Cyber Purple Default Theme (Dark) */
+  --bg-primary: #0a0a0a;
+  --text-primary: #f3f4f6;
+  --accent-color: #9333EA;
+  
+  /* Card specific variables */
+  --card-bg: rgba(17, 24, 39, 0.4); /* Subtle dark glass */
+  --card-border: rgba(255, 255, 255, 0.1);
+  --overlay-bg: rgba(0, 0, 0, 0.8); /* Dark hover overlay */
+  --btn-bg: rgba(31, 41, 55, 0.8); /* Dark icon button */
+}
+
+[data-theme="light"] {
+  --bg-primary: #f9fafb;
+  --text-primary: #111827;
+  --accent-color: #7e22ce;
+  
+  /* Card specific variables */
+  --card-bg: rgba(255, 255, 255, 0.8); /* Clean white glass */
+  --card-border: rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(255, 255, 255, 0.85); /* Premium frosted light overlay */
+  --btn-bg: rgba(243, 244, 246, 0.8); /* Light icon button */
+}

@@ -1,0 +1,247 @@
+{
+  "portfolio": {
+    "statusWidget": {
+      "currentFocus": "Prepping for finals and structuring final projects before transitioning into the job market.",
+      "milestone": "May 2026 Certifications",
+      "active": true
+    },
+    "manifesto": {
+      "title": "Why I Build",
+      "body": "I am a student developer focused on community impact, not a professional freelancer. I build enterprise-grade applications to help individuals and small businesses who can't afford multi-million dollar software. I want to learn about their lives, their businesses, and automate their environments so they can focus on what matters."
+    },
+    "projects": [
+      {
+        "id": "universal-repair-tickets",
+        "title": "Universal Repair Tickets",
+        "status": "MVP",
+        "shortDescription": "A multi-tenant SaaS repair platform automating workflows for a local business. Features dynamic Kanban boards and automated client communications.",
+        "techStack": ["React 18", "Tailwind CSS", "Supabase", "PostgreSQL"],
+        "quickLinks": {
+          "github": "#",
+          "live": "#"
+        },
+        "deepDive": {
+          "overview": "Digitizing workflows with dynamic Kanban boards, custom UI routing, and automated SMS/Email client communications.",
+          "theProblem": "The local retail shop was losing hours every week to paper-based workflows, manual data entry, and inefficient customer communication loops. Privilege escalation and data enforcement were also major liabilities.",
+          "theSolution": "Architected a React and Supabase multi-tenant platform with a global white-labeling engine. Built an extensive Admin Control Center to manage financials and auto-assignment workflows, effectively eliminating the manual paper trail.",
+          "techStackDetails": "Implemented Supabase Row Level Security (RLS) and strict React role-based access control (RBAC) to completely prevent privilege escalation across Admin, Manager, and Customer portals.",
+          "futureGoals": "Integrate AI-driven repair time estimations based on historical ticket data, and expand the white-labeling engine for other local repair shops."
+        }
+      },
+      {
+        "id": "wedding-venue-pos",
+        "title": "Wedding Venue POS System",
+        "status": "MVP",
+        "shortDescription": "Point-of-Sale application handling live session timers, dynamic tax calculations, and split-check capabilities to automate workflows for a local venue.",
+        "techStack": ["React", "Vite", "Supabase", "PostgreSQL"],
+        "quickLinks": {
+          "github": "#",
+          "live": "#"
+        }
+      },
+      {
+        "id": "beverage-api",
+        "title": "Beverage API SaaS",
+        "status": "MVP",
+        "shortDescription": "A decoupled full-stack SaaS platform utilizing a Java backend and React frontend to deliver a monetized, secure recipe platform.",
+        "techStack": ["Java", "Spring Boot", "React", "Stripe API"],
+        "quickLinks": {
+          "github": "#",
+          "live": "#"
+        }
+      },
+      {
+        "id": "timber-n-tools",
+        "title": "Timber & Tools E-Commerce",
+        "status": "Active Dev",
+        "shortDescription": "Localized multi-tenant e-commerce marketplace featuring direct lumber sales and a real-time threaded messaging engine.",
+        "techStack": ["C#", "ASP.NET Core", "Entity Framework", "Supabase"],
+        "quickLinks": {
+          "github": "#",
+          "live": "#"
+        }
+      },
+      {
+        "id": "goat-coach",
+        "title": "GOAT Coach Predictive Engine",
+        "status": "Beta",
+        "shortDescription": "High-frequency predictive engine processing a 60+ feature Monte Carlo simulation to identify real-time market inefficiencies in sports data.",
+        "techStack": ["Python", ".NET MAUI", "NumPy", "REST APIs"],
+        "quickLinks": {
+          "github": "#",
+          "live": "#"
+        }
+      }
+    ],
+    "uses": {
+      "hardware": [
+        "Alienware 16 Aurora AC16250 Laptop",
+        "Intel(R) Core(TM) 7 240H Processor",
+        "16.0 GB RAM",
+        "Windows 11 Home",
+        "ASUS TUF Gaming 27\" 2K HDR Monitor (170Hz)",
+        "Logitech G703 Lightspeed Wireless Gaming Mouse",
+        "Logitech G815 LIGHTSYNC RGB Mechanical Keyboard"
+      ],
+      "software": ["Visual Studio", "IntelliJ IDEA", "VS Code", "Postman"],
+      "vibe": {
+        "fuel": "Coffee or Energy Drinks",
+        "music": "Bad Bunny"
+      }
+    },
+    "terminal": {
+      "commands": {
+        "quote": "\"You will continue to suffer if you have an emotional reaction to everything that is said to you. True power is sitting back and observing everything with logic. True power is restraint. If words control you that means everyone else can control you. Breathe and allow things to pass.\" - Bruce Lee",
+        "quote2": "\"Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it.\" - Bruce Lee",
+        "quote3": "\"A quick temper will make a fool of you soon enough.\" - Bruce Lee"
+      }
+    },
+    "resume": {
+      "education": [
+        {
+          "degree": "A.A.S. (In Progress) | Computer Software Development & Web Application Development",
+          "school": "Kirkwood Community College, Cedar Rapids, IA",
+          "date": "Expected May 2027",
+          "details": [
+            "Certifications: Java Programming, .NET Programming (2026); Full Stack Developer (2027)",
+            "Gilman Scholar (Study Abroad – Singapore): Selected for a highly competitive, two-week intensive program focusing on AI & Project Management. (June 2026)"
+          ]
+        }
+      ],
+      "skills": {
+        "Languages & Frameworks": "Java, C# (.NET, ASP.NET Core MVC), JavaScript, Python, HTML5, CSS3, React.js, TypeScript, Spring Boot, Vite, Bootstrap 5, Entity Framework Core, Tailwind CSS",
+        "Databases & Integrations": "PostgreSQL, Supabase, MySQL, T-SQL, ADO.NET, JDBC, RESTful API Design, Enterprise SaaS APIs (Stripe, Twilio), Data Aggregation APIs (MLB Stats, OpenWeatherMap, PropOdds, RapidAPI, Google Search API)",
+        "AI & Platforms": "Predictive Modeling & Algorithms (Monte Carlo, NumPy, Numba), Web SaaS Architecture, Cross-Platform Mobile (.Net MAUI), Azure Container Apps, Docker, GitHub Actions (CI/CD), Vercel",
+        "Tools & Other": "Visual Studio, IntelliJ IDEA, VS Code, Unit Testing, Git, GitHub (Projects), CI/CD Automation, Azure, Postman, Cloudflare Turnstile, Data Analysis, Windows Batch Scripting, Agile/Scrum",
+        "Personality Traits": "Bilingual (Spanish/English), Personable, Communicative, Team-Collaborator"
+      },
+      "experience": [
+        {
+          "role": "IT Support Specialist",
+          "company": "Amana Society, Inc. | Amana, IA",
+          "date": "March 2023 - 2025",
+          "bullets": [
+            "Provided responsive IT support and troubleshooting for hardware and software issues to ensure smooth daily operations across the organization.",
+            "Leveraged strong interpersonal skills to translate technical problems and solutions effectively for non-technical and technical staff.",
+            "Transitioned to a part-time role to successfully balance professional IT responsibilities while pursuing a software development degree."
+          ]
+        }
+      ],
+      "honors": [
+        {
+          "title": "Eagle Leadership Program - (Bronze Level Award)",
+          "organization": "Kirkwood Community College",
+          "date": "2024 - 2025",
+          "description": "Recognized for active engagement and consistent participation in diverse educational, cultural, and community-building events across campus."
+        },
+        {
+          "title": "Dean’s List",
+          "organization": "Kirkwood Community College",
+          "date": "2024 - 2025",
+          "description": "Recognized for outstanding academic achievement and maintaining a high GPA throughout the academic year."
+        }
+      ],
+      "academicProjects": [
+        {
+          "title": "Java Application Development",
+          "tech": "Java SE, Java EE, Java Servlets, JSP, JDBC, Docker, Microsoft Azure",
+          "date": "2023–Present",
+          "bullets": [
+            "Designed, coded, and tested object-oriented Java applications across three courses (Java I, II, III), progressing from core OOP principles through web-based Java and cloud deployment.",
+            "Developed Java web applications using Java Servlets and JSP; containerized applications with Docker and deployed to Microsoft Azure cloud infrastructure.",
+            "Produced UML Class Diagrams, Activity Diagrams, and User Stories for each project phase."
+          ]
+        },
+        {
+          "title": ".NET / C# Application Development",
+          "tech": "C#, ASP.NET Core MVC, Visual Studio, T-SQL, SQL Server",
+          "date": "2023–Present",
+          "bullets": [
+            "Designed, coded, and unit-tested C# applications across three courses (.NET Development I, II, III) using Visual Studio 2022.",
+            "Developed data-driven web applications integrating T-SQL stored procedures, parameterized queries, and SQL Server relational database back-ends.",
+            "Authored User Stories, MVP Stories, Activity Diagrams, UML Class Diagrams, and Wireframes for each project."
+          ]
+        },
+        {
+          "title": "Relational Database Design",
+          "tech": "MySQL, SQL, DDL/DML, Entity-Relationship Diagrams, Normalization (3NF)",
+          "date": "2024",
+          "bullets": [
+            "Designed and implemented normalized relational databases from business requirements through ER Diagram modeling, schema design, and full SQL DDL/DML implementation in MySQL.",
+            "Produced comprehensive design documentation including Entity-Relationship Diagrams, data dictionaries, and normalization analysis through Third Normal Form (3NF)."
+          ]
+        }
+      ]
+    },
+    "i18n": {
+      "es": {
+        "heroTitle": "Desarrollador Full-Stack creando aplicaciones web de alto impacto y automatización.",
+        "heroSub": "Especializado en React, C# y Java para transformar procesos manuales en soluciones digitales reales y escalables.",
+        "nav": {
+          "home": "Inicio",
+          "about": "Sobre Mí",
+          "uses": "Mi Equipo",
+          "resume": "Currículum"
+        },
+        "footer": {
+          "currently": "Actualmente:",
+          "copyright": "Arquitectado con React y Tailwind v4."
+        },
+        "home": {
+          "available": "🟢 Disponible para roles desde Mayo 2026",
+          "whoAmI": "Quién Soy",
+          "viewResume": "Ver Currículum",
+          "featuredArch": "Arquitectura Destacada"
+        },
+        "card": {
+          "viewArch": "Ver Arquitectura ↗",
+          "viewGithub": "Ver Código"
+        },
+        "about": {
+          "statusWidget": {
+            "currentFocus": "Preparándome para los exámenes finales y estructurando mis últimos proyectos antes de tirarme al mercado laboral.",
+            "milestone": "Certificaciones en Mayo 2026"
+          },
+          "manifestoTitle": "Por Qué Yo Construyo",
+          "manifestoBody": "Soy un estudiante de desarrollo enfocado en hacer un impacto real en mi comunidad, no un freelancer buscando cobrar. Me dedico a crear aplicaciones de nivel empresarial para ayudar a personas y negocios locales que no tienen el presupuesto para softwares millonarios. Me gusta conectar con ellos, entender su estilo de vida y su negocio, y automatizar su entorno para que puedan enfocarse en lo que de verdad importa.",
+          "sections": {
+            "journeyTitle": "El Comienzo",
+            "journeyP1": "Mi transición a la ingeniería de software nació de mi experiencia dando soporte técnico en Amana Society. Arreglar problemas de hardware y software me enseñó una lección clave: la tecnología solo es buena si la gente la sabe usar.",
+            "journeyP2": "Uso mis habilidades interpersonales para traducir problemas técnicos complejos a soluciones claras, tanto para el equipo técnico como para el resto del staff. Como desarrollador bilingüe (Español/Inglés), me encanta romper las barreras de comunicación y crear entornos digitales que de verdad le faciliten la vida a la gente.",
+            "perspectiveTitle": "Visión Global y la IA",
+            "perspectiveP1": "Más allá del código, estoy enfocado en el liderazgo y el futuro de la tecnología. Fui seleccionado como Gilman Scholar para un programa intensivo súper competitivo en Singapur (Junio 2026), enfocado estrictamente en Inteligencia Artificial y Gestión de Proyectos. Esta experiencia global define directamente cómo diseño soluciones escalables para el futuro."
+          }
+        },
+        "projects": {
+          "universal-repair-tickets": {
+            "title": "Tickets de Reparación Universal",
+            "shortDescription": "Una plataforma SaaS multi-inquilino para automatizar el trabajo de un negocio local. Cuenta con tableros Kanban dinámicos y comunicación automática con el cliente.",
+            "deepDive": {
+              "overview": "Digitalizando los procesos del negocio usando tableros Kanban dinámicos, enrutamiento personalizado y notificaciones automáticas por SMS/Email para los clientes.",
+              "theProblem": "La tienda local estaba perdiendo horas a la semana manejando todo en papel, entrando datos a mano y teniendo mala comunicación con los clientes. Además, la seguridad de los datos era un gran riesgo.",
+              "theSolution": "Diseñé una plataforma multi-inquilino con React y Supabase. Construí un Centro de Control Administrativo completo para manejar las finanzas y asignar el trabajo automáticamente, eliminando el papeleo por completo.",
+              "techStackDetails": "Implementé Seguridad a Nivel de Fila (RLS) en Supabase y un control de acceso por roles (RBAC) súper estricto en React para evitar cualquier fallo de seguridad entre los portales de Administración, Gerencia y Clientes.",
+              "futureGoals": "Integrar inteligencia artificial para estimar tiempos de reparación usando el historial de los tickets, y expandir el sistema para otros talleres locales."
+            }
+          },
+          "wedding-venue-pos": {
+            "title": "Sistema POS para Bodas",
+            "shortDescription": "Punto de venta (POS) que maneja temporizadores en vivo, cálculos de impuestos dinámicos y división de cuentas para automatizar el trabajo en un local de bodas."
+          },
+          "beverage-api": {
+            "title": "API de Bebidas SaaS",
+            "shortDescription": "Plataforma SaaS full-stack desacoplada usando un backend en Java y un frontend en React para ofrecer un sistema de recetas monetizado y seguro."
+          },
+          "timber-n-tools": {
+            "title": "E-Commerce Timber & Tools",
+            "shortDescription": "Mercado de comercio electrónico multi-inquilino localizado, con venta directa de madera y un motor de mensajería en tiempo real."
+          },
+          "goat-coach": {
+            "title": "Motor Predictivo GOAT Coach",
+            "shortDescription": "Motor predictivo de alta frecuencia que procesa simulaciones de Monte Carlo con más de 60 variables para encontrar ineficiencias del mercado en vivo en datos deportivos."
+          }
+        }
+      }
+    }
+  }
+}
