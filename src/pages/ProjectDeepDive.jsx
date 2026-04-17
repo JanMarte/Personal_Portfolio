@@ -42,6 +42,9 @@ export default function ProjectDeepDive() {
     { id: "future", label: labels.future }
   ];
 
+  const wipText = lang === 'es' ? "Próximamente" : "Coming Soon";
+  const hasGithub = project.quickLinks?.github && project.quickLinks.github !== "#";
+
   return (
     <div className="animate-fade-in text-left max-w-5xl mx-auto flex flex-col md:flex-row md:gap-12 mt-4 md:mt-12 gap-12 mt-12 mb-24 relative">
       
@@ -83,10 +86,24 @@ export default function ProjectDeepDive() {
                 {labels.viewLive}
               </a>
             )}
-            {project.quickLinks?.github && (
+            
+            {hasGithub ? (
               <a href={project.quickLinks.github} target="_blank" rel="noreferrer" className="px-6 py-2 border border-[var(--card-border)] hover:border-[var(--accent-color)] rounded transition-colors flex items-center gap-2 font-bold bg-[var(--btn-bg)]">
                 {labels.viewSource}
               </a>
+            ) : (
+              <div className="relative group/tooltip flex items-center justify-center">
+                <button
+                  disabled
+                  className="px-6 py-2 border border-[var(--card-border)] bg-[var(--btn-bg)] text-[var(--text-primary)] opacity-40 cursor-not-allowed rounded flex items-center gap-2 font-bold transition-colors"
+                >
+                  {labels.viewSource}
+                </button>
+                {/* The 'Coming Soon' Banner */}
+                <span className="absolute bottom-full mb-3 px-3 py-1 text-xs font-bold tracking-widest uppercase text-white bg-red-600/90 rounded opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg backdrop-blur-sm z-50">
+                  {wipText}
+                </span>
+              </div>
             )}
           </div>
         </div>

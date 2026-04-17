@@ -17,8 +17,8 @@
         "shortDescription": "A multi-tenant SaaS repair platform automating workflows for a local business. Features dynamic Kanban boards and automated client communications.",
         "techStack": ["React 18", "Tailwind CSS", "Supabase", "PostgreSQL"],
         "quickLinks": {
-          "github": "#",
-          "live": "#"
+          "github": "https://github.com/JanMarte/universal-repair-tickets",
+          "live": "https://universal-repair-tickets.vercel.app/"
         },
         "deepDive": {
           "overview": "A robust multi-tenant SaaS platform built to digitalize and automate the workflow of local repair shops, replacing legacy paper systems with a real-time digital solution.",
@@ -35,8 +35,8 @@
         "shortDescription": "Point-of-Sale application handling live session timers, dynamic tax calculations, and split-check capabilities to automate workflows for a local venue.",
         "techStack": ["React", "Vite", "Supabase", "PostgreSQL"],
         "quickLinks": {
-          "github": "#",
-          "live": "#"
+          "github": "https://github.com/JanMarte/POS_System",
+          "live": "https://jan-wedding-bar.vercel.app/"
         },
         "deepDive": {
           "overview": "A localized Point-of-Sale application engineered specifically for the unique operational needs of event venues, handling live timers, dynamic tax logic, and complex transaction splitting.",
@@ -71,7 +71,7 @@
         "shortDescription": "Localized multi-tenant e-commerce marketplace featuring direct lumber sales and a real-time threaded messaging engine.",
         "techStack": ["C#", "ASP.NET Core", "Entity Framework", "Supabase"],
         "quickLinks": {
-          "github": "#",
+          "github": "https://github.com/JanMarte/MillAuction",
           "live": "#"
         },
         "deepDive": {
