@@ -5,18 +5,18 @@ export default function HackerTerminal() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
   const [history, setHistory] = useState([
-    { type: "system", text: "J.MARTE OS v1.0.0 initialized." },
-    { type: "system", text: "Type 'help' to view available commands." }
+    "J.MARTE SECURE TERMINAL v1.0.0",
+    "Type 'help' to view available commands.",
   ]);
   const inputRef = useRef(null);
-  const terminalRef = useRef(null);
-
+  
   const { commands } = data.portfolio.terminal;
 
-  // Toggle terminal globally
+  // Toggle terminal with the backtick (`) key
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.ctrlKey && e.key === "`") {
+      if (e.key === "`") {
+        e.preventDefault();
         setIsOpen((prev) => !prev);
       }
     };
@@ -24,93 +24,105 @@ export default function HackerTerminal() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  // Auto-focus input when opened & auto-scroll to bottom
+  // Auto-focus the input when the terminal opens
   useEffect(() => {
-    if (isOpen) inputRef.current?.focus();
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (terminalRef.current) {
-      terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
+    if (isOpen && inputRef.current) {
+      setTimeout(() => inputRef.current.focus(), 100);
     }
-  }, [history]);
+  }, [isOpen]);
 
   const handleCommand = (e) => {
     if (e.key === "Enter") {
       const cmd = input.trim().toLowerCase();
-      let response = "";
+      const newHistory = [...history, `> ${input}`];
 
-      switch (cmd) {
-        case "help":
-          response = "Available commands: whoami, skills, quote, quote2, quote3, sudo, clear";
-          break;
-        case "whoami":
-          response = "Jan Marte. Full-Stack Developer. Builder of tools for the community.";
-          break;
-        case "skills":
-          response = "Java, C#, React, PostgreSQL, Supabase, Tailwind, Spring Boot.";
-          break;
-        case "quote":
-          response = commands.quote;
-          break;
-        case "quote2":
-          response = commands.quote2;
-          break;
-        case "quote3":
-          response = commands.quote3;
-          break;
-        case "sudo":
-          response = "Nice try. Admin privileges required. This incident will be reported.";
-          break;
-        case "clear":
-          setHistory([]);
-          setInput("");
-          return;
-        case "":
-          setInput("");
-          return;
-        default:
-          response = `Command not found: ${cmd}. Type 'help' for available commands.`;
+      // ACTION COMMANDS
+      if (cmd === "clear") {
+        setHistory(["J.MARTE SECURE TERMINAL v1.0.0"]);
+        setInput("");
+        return; // Stop here so it doesn't add the clear command to history
+      } 
+      
+      else if (cmd === "help") {
+        newHistory.push("Available commands: whoami, skills, contact, resume, matrix, coffee, theme, clear, exit, sudo");
+      } 
+      
+      else if (cmd === "exit") {
+        setIsOpen(false);
+      } 
+      
+      else if (cmd === "resume") {
+        newHistory.push("Downloading classified document: Jan_Marte_Resume.pdf...");
+        // This programmatically triggers your PDF download!
+        const link = document.createElement('a');
+        link.href = '/Jan_Marte_Resume.pdf';
+        link.download = 'Jan_Marte_Resume.pdf';
+        link.click();
       }
 
-      setHistory((prev) => [
-        ...prev,
-        { type: "user", text: `user@jmarte:~$ ${cmd}` },
-        { type: "system", text: response }
-      ]);
+      else if (cmd === "theme") {
+        newHistory.push("Bypassing mainframe... Executing global theme override.");
+        // This physically clicks your theme toggle button!
+        document.documentElement.setAttribute(
+          "data-theme", 
+          document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"
+        );
+      }
+
+      // TEXT COMMANDS (From JSON)
+      else if (commands[cmd]) {
+        // If the JSON contains newline characters (\n), split them into separate lines
+        const lines = commands[cmd].split('\n');
+        newHistory.push(...lines);
+      } 
+      
+      else if (cmd !== "") {
+        newHistory.push(`Command not found: ${cmd}. Type 'help' for available commands.`);
+      }
+
+      setHistory(newHistory);
       setInput("");
     }
   };
 
-  if (!isOpen) return null;
-
   return (
-    <div className="fixed top-0 left-0 w-full z-50 animate-slide-down">
-      <div className="bg-black/90 backdrop-blur-xl border-b border-[var(--accent-color)]/50 text-[#10B981] font-mono text-sm p-6 shadow-2xl shadow-[var(--accent-color)]/10 h-80 flex flex-col">
-        <div className="flex justify-between items-center mb-4 pb-2 border-b border-gray-800">
-          <span className="font-bold">Terminal Access - Press Ctrl + ` to close</span>
-          <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white">✕</button>
-        </div>
-        
-        <div ref={terminalRef} className="flex-1 overflow-y-auto space-y-2 mb-4 scrollbar-hide">
-          {history.map((line, i) => (
-            <div key={i} className={line.type === "user" ? "text-gray-300" : "text-[var(--accent-color)]"}>
-              {line.text}
-            </div>
-          ))}
-        </div>
+    <div 
+      className={`fixed bottom-0 left-0 w-full bg-[#0a0a0a] text-emerald-400 font-mono text-sm z-[100] border-t-2 border-[var(--accent-color)] shadow-[0_-10px_40px_rgba(0,0,0,0.5)] transition-transform duration-500 ease-in-out ${
+        isOpen ? "translate-y-0" : "translate-y-full"
+      }`}
+      style={{ height: "40vh" }}
+    >
+      {/* Terminal Header */}
+      <div className="flex justify-between items-center px-4 py-2 bg-[#1a1a1a] border-b border-gray-800">
+        <span className="font-bold text-gray-400">user@jmarte-server:~</span>
+        <button 
+          onClick={() => setIsOpen(false)}
+          className="text-gray-400 hover:text-white transition-colors"
+        >
+          [ CLOSE ]
+        </button>
+      </div>
 
-        <div className="flex items-center gap-2">
-          <span className="text-gray-300">user@jmarte:~$</span>
+      {/* Terminal Body */}
+      <div className="p-4 h-[calc(100%-40px)] overflow-y-auto flex flex-col gap-2">
+        {history.map((line, idx) => (
+          <div key={idx} className={line.startsWith(">") ? "text-white" : "text-emerald-400"}>
+            {line}
+          </div>
+        ))}
+        
+        <div className="flex gap-2 items-center mt-2">
+          <span className="text-[var(--accent-color)] font-bold">➜</span>
+          <span className="text-blue-400 font-bold">~</span>
           <input
             ref={inputRef}
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleCommand}
-            className="flex-1 bg-transparent border-none outline-none text-[#10B981]"
-            autoComplete="off"
+            className="flex-1 bg-transparent outline-none border-none text-white focus:ring-0"
             spellCheck="false"
+            autoComplete="off"
           />
         </div>
       </div>

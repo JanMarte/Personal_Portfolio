@@ -21,11 +21,11 @@
           "live": "#"
         },
         "deepDive": {
-          "overview": "Digitizing workflows with dynamic Kanban boards, custom UI routing, and automated SMS/Email client communications.",
-          "theProblem": "The local retail shop was losing hours every week to paper-based workflows, manual data entry, and inefficient customer communication loops. Privilege escalation and data enforcement were also major liabilities.",
-          "theSolution": "Architected a React and Supabase multi-tenant platform with a global white-labeling engine. Built an extensive Admin Control Center to manage financials and auto-assignment workflows, effectively eliminating the manual paper trail.",
-          "techStackDetails": "Implemented Supabase Row Level Security (RLS) and strict React role-based access control (RBAC) to completely prevent privilege escalation across Admin, Manager, and Customer portals.",
-          "futureGoals": "Integrate AI-driven repair time estimations based on historical ticket data, and expand the white-labeling engine for other local repair shops."
+          "overview": "A robust multi-tenant SaaS platform built to digitalize and automate the workflow of local repair shops, replacing legacy paper systems with a real-time digital solution.",
+          "theProblem": "The local retail shop was losing approximately 15 hours a week managing paper-based tickets, manual data entry, and disjointed customer communications. Privilege escalation and lack of data audit trails were major liabilities.",
+          "theSolution": "Architected a React (frontend) and Supabase (backend) multi-tenant platform featuring a global white-labeling engine. Built a centralized Admin Control Center with dynamic Kanban boards for ticket tracking, auto-assignment workflows, and automated notifications.",
+          "techStackDetails": "Implemented strict Row Level Security (RLS) in Supabase PostgreSQL and React role-based access control (RBAC) to enforce strict privilege boundaries across Admin, Manager, and Customer portals. Utilized Tailwind CSS for a responsive, accessible UI.",
+          "futureGoals": "Integrate AI-driven repair time estimations based on historical ticket data, implement a payment gateway for digital invoicing, and scale the white-labeling engine for regional franchise adoption."
         }
       },
       {
@@ -37,6 +37,13 @@
         "quickLinks": {
           "github": "#",
           "live": "#"
+        },
+        "deepDive": {
+          "overview": "A localized Point-of-Sale application engineered specifically for the unique operational needs of event venues, handling live timers, dynamic tax logic, and complex transaction splitting.",
+          "theProblem": "The venue struggled with off-the-shelf POS systems that couldn't handle mid-event tab splitting, dynamic hourly rate calculations, or localized tax rules without manual overrides, leading to billing errors and slow checkout times.",
+          "theSolution": "Developed a custom POS interface utilizing React and Vite for a lightning-fast client experience. Integrated live session timers that automatically calculate costs based on venue usage, alongside a complex state management system to handle split-checks instantly.",
+          "techStackDetails": "Powered by a PostgreSQL database via Supabase for real-time transaction syncing. State management handles complex cart logic, while the UI is optimized for touch-screen terminals to ensure rapid bartender/staff input.",
+          "futureGoals": "Implement offline-first capabilities using service workers to prevent transaction loss during venue network outages, and add detailed real-time inventory tracking for bar operations."
         }
       },
       {
@@ -48,6 +55,13 @@
         "quickLinks": {
           "github": "#",
           "live": "#"
+        },
+        "deepDive": {
+          "overview": "A decoupled full-stack SaaS platform providing a monetized, secure, and searchable API for custom beverage recipes and mixology data.",
+          "theProblem": "Hobbyist developers and local bars needed a reliable, structured database for drink recipes, but existing APIs were either poorly documented, expensive, or lacked a modern developer portal for managing API keys and usage quotas.",
+          "theSolution": "Engineered a robust Java backend using Spring Boot to serve as the core API, paired with a React frontend acting as the developer portal. Implemented secure API key generation, rate limiting, and a subscription model for tiered API access.",
+          "techStackDetails": "Backend architecture features Java, Spring Boot, and Spring Security, handling strict CORS policies and JWT authentication. Frontend uses React to display interactive documentation and manage user subscriptions.",
+          "futureGoals": "Introduce GraphQL support for more precise data querying, expand the dataset using automated data aggregation, and build community features for users to submit and rate new recipes."
         }
       },
       {
@@ -59,6 +73,13 @@
         "quickLinks": {
           "github": "#",
           "live": "#"
+        },
+        "deepDive": {
+          "overview": "A localized, multi-tenant e-commerce marketplace specifically designed for direct lumber sales, featuring a real-time messaging engine connecting buyers and suppliers.",
+          "theProblem": "Local lumber yards and independent woodworkers lacked a dedicated, transparent platform to buy and sell raw materials, often relying on inefficient social media marketplaces that lacked proper inventory tracking or secure messaging.",
+          "theSolution": "Built a robust MVC web application utilizing C# and ASP.NET Core to handle complex inventory structures like board feet calculations and wood species categorization. Integrated a real-time messaging system allowing buyers to negotiate directly with sellers.",
+          "techStackDetails": "Utilized C#, ASP.NET Core MVC, and Entity Framework Core for strict backend data modeling. Connected to a Supabase PostgreSQL database using secure environment variables. Implemented responsive UI components for mobile shopping.",
+          "futureGoals": "Implement a dynamic pricing algorithm based on current lumber market rates and integrate a geographic radius search to connect buyers with the closest local mills."
         }
       },
       {
@@ -70,6 +91,13 @@
         "quickLinks": {
           "github": "#",
           "live": "#"
+        },
+        "deepDive": {
+          "overview": "A high-frequency predictive analytics engine that leverages Monte Carlo simulations and machine learning principles to identify real-time market inefficiencies in sports data.",
+          "theProblem": "Standard sports analytics platforms provide historical data but lack real-time predictive modeling capable of processing multiple live variables (weather, injuries, live odds) simultaneously to find value edges.",
+          "theSolution": "Engineered a Python-based processing engine that ingests data from multiple REST APIs (MLB Stats, OpenWeatherMap, PropOdds). Designed an algorithm that runs a 60+ feature Monte Carlo simulation over thousands of iterations to output probability matrices.",
+          "techStackDetails": "Built the core simulation logic using Python, NumPy, and Numba for high-performance mathematical processing. Connected to a .NET MAUI cross-platform mobile frontend to display the probability matrices via a clean, data-dense UI.",
+          "futureGoals": "Transition the simulation engine to Azure Container Apps for scalable cloud processing, and introduce deep learning models (TensorFlow) to weight the variables dynamically based on seasonal trends."
         }
       }
     ],
@@ -91,9 +119,16 @@
     },
     "terminal": {
       "commands": {
-        "quote": "\"You will continue to suffer if you have an emotional reaction to everything that is said to you. True power is sitting back and observing everything with logic. True power is restraint. If words control you that means everyone else can control you. Breathe and allow things to pass.\" - Bruce Lee",
-        "quote2": "\"Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it.\" - Bruce Lee",
-        "quote3": "\"A quick temper will make a fool of you soon enough.\" - Bruce Lee"
+        "quote": "\"You will continue to suffer if you have an emotional reaction to everything that is said to you...\" - Bruce Lee",
+        "quote2": "\"Always be yourself, express yourself, have faith in yourself...\" - Bruce Lee",
+        "quote3": "\"A quick temper will make a fool of you soon enough.\" - Bruce Lee",
+        
+        "whoami": "Jan Marte. Full-Stack Developer bridging modern frontend experiences with robust backend architecture.",
+        "skills": "SYSTEM CHECK... [React] [C#] [Java] [PostgreSQL] [Supabase] [Tailwind] - All systems nominal and ready for deployment.",
+        "contact": "Establishing secure connection... \nEmail: janmmarte16@gmail.com \nGitHub: https://github.com/JanMarte \nLinkedIn: https://www.linkedin.com/in/janmmarte/",
+        "sudo": "Nice try. This incident will be reported.",
+        "matrix": "Wake up, Neo... The Matrix has you. Follow the white rabbit.",
+        "coffee": "Error 418: I'm a teapot. Cannot brew coffee. Please initiate manual caffeine sequence."
       }
     },
     "resume": {
@@ -197,6 +232,103 @@
           "viewArch": "Ver Arquitectura ↗",
           "viewGithub": "Ver Código"
         },
+        "uses": {
+          "title": "La Sala de Máquinas",
+          "subtitle": "Una lista completa de mi hardware, software y configuración diaria. Este es el equipo que uso para diseñar aplicaciones full-stack y automatizar procesos de negocio.",
+          "hardware": "💻 Hardware y Equipo",
+          "software": "⚡ Software y Entornos",
+          "vibe": "🎧 Flujo de Trabajo y Vibra",
+          "fuel": "El Combustible",
+          "music": "La Banda Sonora"
+        },
+        "resume": {
+          "title": "Curriculum Vitae",
+          "subtitle": "Jan Marte • Desarrollador",
+          "download": "Descargar PDF ↓",
+          "open": "Abrir en Pestaña ↗",
+          "education": "Educación",
+          "skills": "Habilidades Técnicas",
+          "experience": "Experiencia",
+          "honors": "Honores y Reconocimientos",
+          "projects": "Proyectos Académicos y Principales"
+        },
+        "resumeData": {
+          "education": [
+            {
+              "degree": "A.A.S. (En curso) | Desarrollo de Software y Aplicaciones Web",
+              "school": "Kirkwood Community College, Cedar Rapids, IA",
+              "date": "Esperado Mayo 2027",
+              "details": [
+                "Certificaciones: Programación en Java, Programación .NET (2026); Desarrollador Full Stack (2027)",
+                "Becario Gilman (Estudio en el extranjero – Singapur): Seleccionado para un programa intensivo muy competitivo enfocado en Inteligencia Artificial y Gestión de Proyectos. (Junio 2026)"
+              ]
+            }
+          ],
+          "skills": {
+            "Lenguajes y Frameworks": "Java, C# (.NET, ASP.NET Core MVC), JavaScript, Python, HTML5, CSS3, React.js, TypeScript, Spring Boot, Vite, Bootstrap 5, Entity Framework Core, Tailwind CSS",
+            "Bases de Datos e Integraciones": "PostgreSQL, Supabase, MySQL, T-SQL, ADO.NET, JDBC, Diseño API RESTful, APIs SaaS (Stripe, Twilio), APIs de Datos (MLB Stats, OpenWeatherMap, PropOdds, RapidAPI, Google Search API)",
+            "IA y Plataformas": "Modelado Predictivo y Algoritmos (Monte Carlo, NumPy, Numba), Arquitectura SaaS, Móvil Multiplataforma (.Net MAUI), Azure Container Apps, Docker, GitHub Actions (CI/CD), Vercel",
+            "Herramientas y Otros": "Visual Studio, IntelliJ IDEA, VS Code, Pruebas Unitarias, Git, GitHub (Proyectos), Automatización CI/CD, Azure, Postman, Cloudflare Turnstile, Análisis de Datos, Agile/Scrum",
+            "Habilidades Blandas": "Bilingüe (Español/Inglés), Sociable, Comunicativo, Colaborador de Equipo"
+          },
+          "experience": [
+            {
+              "role": "Especialista en Soporte de TI",
+              "company": "Amana Society, Inc. | Amana, IA",
+              "date": "Marzo 2023 - 2025",
+              "bullets": [
+                "Proporcioné soporte técnico receptivo y resolución de problemas de hardware y software para asegurar el buen funcionamiento de las operaciones diarias en toda la organización.",
+                "Aproveché mis fuertes habilidades interpersonales para traducir problemas y soluciones técnicas de manera efectiva tanto para el personal técnico como para el no técnico.",
+                "Hice la transición a un rol de medio tiempo para equilibrar exitosamente las responsabilidades profesionales de TI mientras cursaba la carrera de desarrollo de software."
+              ]
+            }
+          ],
+          "honors": [
+            {
+              "title": "Programa de Liderazgo Eagle - (Premio Nivel Bronce)",
+              "organization": "Kirkwood Community College",
+              "date": "2024 - 2025",
+              "description": "Reconocido por la participación activa y constante en diversos eventos educativos, culturales y de construcción de comunidad en el campus."
+            },
+            {
+              "title": "Lista del Decano",
+              "organization": "Kirkwood Community College",
+              "date": "2024 - 2025",
+              "description": "Reconocido por un desempeño académico sobresaliente y por mantener un promedio general (GPA) alto durante el año académico."
+            }
+          ],
+          "academicProjects": [
+            {
+              "title": "Desarrollo de Aplicaciones en Java",
+              "tech": "Java SE, Java EE, Java Servlets, JSP, JDBC, Docker, Microsoft Azure",
+              "date": "2023–Presente",
+              "bullets": [
+                "Diseñé, programé y probé aplicaciones Java orientadas a objetos a través de tres cursos (Java I, II, III), avanzando desde principios fundamentales de POO hasta implementaciones web y despliegue en la nube.",
+                "Desarrollé aplicaciones web en Java utilizando Servlets y JSP; atomicé aplicaciones con Docker y las desplegué en la infraestructura de la nube de Microsoft Azure.",
+                "Creé diagramas de clases UML, diagramas de actividades e historias de usuario para cada fase del proyecto."
+              ]
+            },
+            {
+              "title": "Desarrollo de Aplicaciones .NET / C#",
+              "tech": "C#, ASP.NET Core MVC, Visual Studio, T-SQL, SQL Server",
+              "date": "2023–Presente",
+              "bullets": [
+                "Diseñé, programé y realicé pruebas unitarias de aplicaciones en C# a lo largo de tres cursos (Desarrollo .NET I, II, III) utilizando Visual Studio 2022.",
+                "Desarrollé aplicaciones web orientadas a datos integrando procedimientos almacenados en T-SQL, consultas parametrizadas y bases de datos relacionales SQL Server en el backend.",
+                "Escribí historias de usuario, requerimientos MVP, diagramas de actividades, diagramas de clases UML y wireframes para cada proyecto."
+              ]
+            },
+            {
+              "title": "Diseño de Bases de Datos Relacionales",
+              "tech": "MySQL, SQL, DDL/DML, Diagramas Entidad-Relación, Normalización (3NF)",
+              "date": "2024",
+              "bullets": [
+                "Diseñé e implementé bases de datos relacionales normalizadas a partir de requisitos comerciales, modelando diagramas ER, diseñando esquemas y programando el código SQL DDL/DML completo en MySQL.",
+                "Elaboré documentación de diseño completa incluyendo diagramas Entidad-Relación, diccionarios de datos y análisis de normalización hasta la Tercera Forma Normal (3NF)."
+              ]
+            }
+          ]
+        },
         "about": {
           "statusWidget": {
             "currentFocus": "Preparándome para los exámenes finales y estructurando mis últimos proyectos antes de tirarme al mercado laboral.",
@@ -217,28 +349,56 @@
             "title": "Tickets de Reparación Universal",
             "shortDescription": "Una plataforma SaaS multi-inquilino para automatizar el trabajo de un negocio local. Cuenta con tableros Kanban dinámicos y comunicación automática con el cliente.",
             "deepDive": {
-              "overview": "Digitalizando los procesos del negocio usando tableros Kanban dinámicos, enrutamiento personalizado y notificaciones automáticas por SMS/Email para los clientes.",
-              "theProblem": "La tienda local estaba perdiendo horas a la semana manejando todo en papel, entrando datos a mano y teniendo mala comunicación con los clientes. Además, la seguridad de los datos era un gran riesgo.",
-              "theSolution": "Diseñé una plataforma multi-inquilino con React y Supabase. Construí un Centro de Control Administrativo completo para manejar las finanzas y asignar el trabajo automáticamente, eliminando el papeleo por completo.",
+              "overview": "Una robusta plataforma SaaS multi-inquilino creada para digitalizar y automatizar el flujo de trabajo de talleres locales, reemplazando el papel con una solución digital en tiempo real.",
+              "theProblem": "La tienda local estaba perdiendo unas 15 horas a la semana manejando todo en papel, entrando datos a mano y teniendo mala comunicación. Además, la seguridad de los datos era un gran riesgo.",
+              "theSolution": "Diseñé una plataforma con React y Supabase. Construí un Centro de Control Administrativo completo con tableros Kanban para rastrear tickets, flujos de asignación automática y notificaciones por SMS/Email.",
               "techStackDetails": "Implementé Seguridad a Nivel de Fila (RLS) en Supabase y un control de acceso por roles (RBAC) súper estricto en React para evitar cualquier fallo de seguridad entre los portales de Administración, Gerencia y Clientes.",
-              "futureGoals": "Integrar inteligencia artificial para estimar tiempos de reparación usando el historial de los tickets, y expandir el sistema para otros talleres locales."
+              "futureGoals": "Integrar inteligencia artificial para estimar tiempos de reparación usando el historial de los tickets, añadir pasarelas de pago y expandir el sistema para otros talleres locales."
             }
           },
           "wedding-venue-pos": {
             "title": "Sistema POS para Bodas",
-            "shortDescription": "Punto de venta (POS) que maneja temporizadores en vivo, cálculos de impuestos dinámicos y división de cuentas para automatizar el trabajo en un local de bodas."
+            "shortDescription": "Punto de venta (POS) que maneja temporizadores en vivo, cálculos de impuestos dinámicos y división de cuentas para automatizar el trabajo en un local de bodas.",
+            "deepDive": {
+              "overview": "Una aplicación de Punto de Venta (POS) localizada y diseñada específicamente para las necesidades únicas de locales de eventos, manejando temporizadores, lógica de impuestos dinámicos y división de transacciones.",
+              "theProblem": "El local batallaba con sistemas POS genéricos que no podían manejar división de cuentas en medio del evento, cálculos de tarifas por hora dinámicas, ni reglas de impuestos locales sin requerir ajustes manuales.",
+              "theSolution": "Desarrollé una interfaz POS personalizada utilizando React y Vite para una experiencia hiper rápida. Integré temporizadores de sesión en vivo que calculan costos automáticamente basados en el uso del local, junto a un sistema complejo de estado para dividir cuentas al instante.",
+              "techStackDetails": "Impulsado por una base de datos PostgreSQL vía Supabase para sincronización de transacciones en tiempo real. La interfaz de usuario está optimizada para terminales de pantalla táctil.",
+              "futureGoals": "Implementar capacidades fuera de línea (offline-first) usando service workers para prevenir pérdida de datos durante caídas de red, y añadir rastreo de inventario en tiempo real para el bar."
+            }
           },
           "beverage-api": {
             "title": "API de Bebidas SaaS",
-            "shortDescription": "Plataforma SaaS full-stack desacoplada usando un backend en Java y un frontend en React para ofrecer un sistema de recetas monetizado y seguro."
+            "shortDescription": "Plataforma SaaS full-stack desacoplada usando un backend en Java y un frontend en React para ofrecer un sistema de recetas monetizado y seguro.",
+            "deepDive": {
+              "overview": "Una plataforma SaaS full-stack desacoplada que provee una API monetizada, segura y de fácil búsqueda para recetas de bebidas y datos de mixología.",
+              "theProblem": "Desarrolladores aficionados y bares locales necesitaban una base de datos estructurada para recetas, pero las APIs existentes estaban mal documentadas, eran caras o carecían de un portal moderno para gestionar llaves API.",
+              "theSolution": "Ingenié un backend robusto en Java usando Spring Boot para que sirviera como la API principal, emparejado con un frontend en React actuando como el portal para desarrolladores. Implementé generación segura de llaves API y un modelo de suscripción escalonada.",
+              "techStackDetails": "La arquitectura backend presenta Java, Spring Boot y Spring Security, manejando políticas estrictas de CORS y autenticación JWT. El frontend usa React para mostrar documentación interactiva y gestionar las suscripciones.",
+              "futureGoals": "Introducir soporte GraphQL para consultas de datos más precisas, expandir el conjunto de datos mediante agregación automática y crear funciones para que la comunidad califique nuevas recetas."
+            }
           },
           "timber-n-tools": {
             "title": "E-Commerce Timber & Tools",
-            "shortDescription": "Mercado de comercio electrónico multi-inquilino localizado, con venta directa de madera y un motor de mensajería en tiempo real."
+            "shortDescription": "Mercado de comercio electrónico multi-inquilino localizado, con venta directa de madera y un motor de mensajería en tiempo real.",
+            "deepDive": {
+              "overview": "Un mercado de comercio electrónico multi-inquilino localizado, diseñado específicamente para ventas directas de madera, que cuenta con un motor de mensajería en tiempo real que conecta a compradores y proveedores.",
+              "theProblem": "Los aserraderos locales y trabajadores de madera independientes carecían de una plataforma dedicada y transparente para comprar y vender materiales, dependiendo de redes sociales ineficientes.",
+              "theSolution": "Construí una aplicación web MVC robusta utilizando C# y ASP.NET Core para manejar estructuras de inventario complejas como cálculos de pies tablares. Integré un sistema de mensajería en tiempo real para negociaciones directas.",
+              "techStackDetails": "Utilicé C#, ASP.NET Core MVC y Entity Framework Core para un modelado estricto de datos en el backend. Conectado a una base de datos Supabase PostgreSQL usando variables de entorno seguras.",
+              "futureGoals": "Implementar un algoritmo de precios dinámicos basado en las tarifas actuales del mercado maderero e integrar una búsqueda de radio geográfico para conectar compradores con los aserraderos locales más cercanos."
+            }
           },
           "goat-coach": {
             "title": "Motor Predictivo GOAT Coach",
-            "shortDescription": "Motor predictivo de alta frecuencia que procesa simulaciones de Monte Carlo con más de 60 variables para encontrar ineficiencias del mercado en vivo en datos deportivos."
+            "shortDescription": "Motor predictivo de alta frecuencia que procesa simulaciones de Monte Carlo con más de 60 variables para encontrar ineficiencias del mercado en vivo en datos deportivos.",
+            "deepDive": {
+              "overview": "Un motor de análisis predictivo de alta frecuencia que aprovecha simulaciones de Monte Carlo y principios de aprendizaje automático para identificar ineficiencias de mercado en tiempo real en datos deportivos.",
+              "theProblem": "Las plataformas estándar de análisis deportivo proporcionan datos históricos pero carecen de modelado predictivo en tiempo real capaz de procesar múltiples variables en vivo (clima, lesiones, probabilidades en vivo) para encontrar ventajas de valor.",
+              "theSolution": "Ingenié un motor de procesamiento basado en Python que ingiere datos de múltiples APIs REST. Diseñé un algoritmo que ejecuta una simulación de Monte Carlo con más de 60 variables a través de miles de iteraciones.",
+              "techStackDetails": "Construí la lógica de simulación central usando Python, NumPy y Numba para un procesamiento matemático de alto rendimiento. Conectado a un frontend móvil multiplataforma .NET MAUI para mostrar las matrices de probabilidad.",
+              "futureGoals": "Transicionar el motor de simulación a Azure Container Apps para procesamiento en la nube escalable, e introducir modelos de aprendizaje profundo (TensorFlow) para pesar las variables dinámicamente según las tendencias de la temporada."
+            }
           }
         }
       }

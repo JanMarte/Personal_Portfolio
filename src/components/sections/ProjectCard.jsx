@@ -5,24 +5,24 @@ import data from "../../data/data.json";
 export default function ProjectCard({ project }) {
   const { lang } = useLanguage();
   
-  // Get the general card button translations
   const tCard = lang === 'es' ? data.portfolio.i18n.es.card : null;
-  
-  // Find the translated text for this specific project (fallback to English if not found)
   const esProject = lang === 'es' ? data.portfolio.i18n.es.projects[project.id] : null;
 
-  // Choose the display text based on language
   const displayTitle = esProject ? esProject.title : project.title;
   const displayDesc = esProject ? esProject.shortDescription : project.shortDescription;
+
+  // Dynamic Color Engine for Status Badges
+  const getStatusStyle = (status) => {
+    const s = status.toLowerCase();
+    if (s.includes('mvp')) return 'text-emerald-600 dark:text-emerald-400 border-emerald-500/30 bg-emerald-500/10';
+    if (s.includes('active') || s.includes('dev')) return 'text-amber-600 dark:text-amber-500 border-amber-500/30 bg-amber-500/10';
+    if (s.includes('beta')) return 'text-blue-600 dark:text-blue-400 border-blue-500/30 bg-blue-500/10';
+    return 'text-[var(--accent-color)] border-[var(--accent-color)]/30 bg-[var(--accent-color)]/10';
+  };
 
   return (
     <div className="group relative flex flex-col p-8 border border-[var(--card-border)] rounded-lg bg-[var(--card-bg)] backdrop-blur-sm hover:border-[var(--accent-color)] hover:shadow-lg transition-all duration-300 overflow-hidden">
       
-      {/* Status Badge */}
-      <div className="absolute top-6 right-6 px-2 py-1 text-[10px] font-bold uppercase tracking-widest rounded bg-[var(--btn-bg)] border border-[var(--card-border)] text-[var(--text-primary)] group-hover:border-[var(--accent-color)] transition-colors">
-        {project.status}
-      </div>
-
       {/* Content Hierarchy */}
       <div className="flex-grow z-10 relative">
         <h3 
@@ -31,27 +31,36 @@ export default function ProjectCard({ project }) {
         >
           {displayTitle}
         </h3>
-        <p className="text-sm opacity-70 leading-relaxed mb-6 group-hover:opacity-0 transition-opacity duration-300">
+        <p className="text-sm opacity-70 leading-relaxed mb-8 group-hover:opacity-0 transition-opacity duration-300">
           {displayDesc}
         </p>
       </div>
 
-      {/* Tech Stack Footer */}
-      <div className="mt-auto pt-6 border-t border-[var(--card-border)] flex flex-wrap gap-x-4 gap-y-2 z-10 relative group-hover:opacity-0 transition-opacity duration-300">
-        {project.techStack.map((tech, index) => (
-          <span key={index} className="text-xs font-mono text-[var(--accent-color)] opacity-80 font-semibold">
-            {tech}
-          </span>
-        ))}
+      {/* Tech Stack Footer & Status Badge (Bottom Right) */}
+      <div className="mt-auto pt-6 border-t border-[var(--card-border)] flex items-end justify-between gap-4 z-10 relative group-hover:opacity-0 transition-opacity duration-300">
+        
+        {/* Tech Stack */}
+        <div className="flex flex-wrap gap-x-4 gap-y-2">
+          {project.techStack.map((tech, index) => (
+            <span key={index} className="text-xs font-mono text-[var(--accent-color)] opacity-80 font-semibold">
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        {/* Vibrant Status Pill */}
+        <div className={`shrink-0 px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full border ${getStatusStyle(project.status)}`}>
+          {project.status}
+        </div>
+
       </div>
 
       {/* Hidden Hover Overlay CTA */}
       <div className="absolute inset-0 bg-[var(--overlay-bg)] backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-20">
         <Link 
           to={`/projects/${project.id}`} 
-          className="px-5 py-2 bg-[var(--cta-color)] text-white font-bold rounded shadow-lg shadow-[var(--accent-color)]/20 hover:scale-105 transition-transform"
+          className="px-5 py-2 bg-[var(--cta-color)] text-white font-bold rounded shadow-lg shadow-[var(--cta-color)]/20 hover:scale-105 transition-transform"
         >
-          {/* Using tCard here fixes the error! */}
           {tCard ? tCard.viewArch : "View Architecture ↗"} 
         </Link>
         

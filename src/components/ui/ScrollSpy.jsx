@@ -24,10 +24,10 @@ export default function ScrollSpy({ sections }) {
   }, [sections]);
 
   return (
-    <div className="sticky top-24 hidden md:flex flex-col gap-4 pl-4 border-l-2 border-[var(--card-border)] relative">
+    <div className="sticky top-32 hidden md:flex flex-col gap-4 pl-4 border-l-2 border-[var(--card-border)] relative">
       {/* The Dynamic Tracking Line */}
       <div 
-        className="absolute left-[-2px] w-[2px] bg-[var(--accent-color)] transition-all duration-300 ease-out"
+        className="absolute left-[-2px] w-[2px] bg-[var(--cta-color)] transition-all duration-300 ease-out"
         style={{
           /* Fixed Math: 40px (h-10) + 16px (gap-4) = 56px per step */
           top: `${Math.max(0, sections.findIndex(s => s.id === activeSection)) * 56}px`,
