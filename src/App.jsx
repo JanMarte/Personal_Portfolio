@@ -32,7 +32,7 @@ function App() {
     // Inject the script
     const script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "https://erkie.github.io/asteroids.min.js";
+    script.src = "https://cdn.jsdelivr.net/gh/michaelharper/Kick-Ass-App-WASD/kickass.js";
     
     script.onload = () => {
       // Force the browser to focus on the body so WASD works immediately
