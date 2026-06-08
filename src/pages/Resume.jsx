@@ -5,16 +5,9 @@ import { useLanguage } from "../context/LanguageContext";
 export default function Resume() {
   const { lang } = useLanguage();
   
-  // The core English data
   const baseResume = data.portfolio.resume;
-  
-  // The Spanish UI labels
   const t = lang === 'es' ? data.portfolio.i18n.es.resume : null;
-  
-  // The Spanish bullet points and content
   const esResumeData = lang === 'es' ? data.portfolio.i18n.es.resumeData : null;
-  
-  // Choose which data to display based on the active language
   const displayResume = esResumeData || baseResume;
 
   const sections = [
@@ -56,7 +49,9 @@ export default function Resume() {
           
           {/* Education */}
           <section id="education" className="scroll-mt-24">
-            <h2 className="text-3xl font-bold mb-8 border-b border-[var(--card-border)] pb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>{t ? t.education : "Education"}</h2>
+            <h2 className="text-3xl font-bold mb-8 border-b border-[var(--card-border)] pb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+              {t ? t.education : "Education"}
+            </h2>
             {displayResume.education.map((edu, idx) => (
               <div key={idx} className="mb-8">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
@@ -75,7 +70,9 @@ export default function Resume() {
 
           {/* Technical Skills */}
           <section id="skills" className="scroll-mt-24">
-            <h2 className="text-3xl font-bold mb-8 border-b border-[var(--card-border)] pb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>{t ? t.skills : "Technical Skills"}</h2>
+            <h2 className="text-3xl font-bold mb-8 border-b border-[var(--card-border)] pb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+              {t ? t.skills : "Technical Skills"}
+            </h2>
             <div className="grid grid-cols-1 gap-6 p-6 border border-[var(--card-border)] rounded-lg bg-[var(--card-bg)]">
               {Object.entries(displayResume.skills).map(([category, skills]) => (
                 <div key={category}>
@@ -88,7 +85,9 @@ export default function Resume() {
 
           {/* Experience */}
           <section id="experience" className="scroll-mt-24">
-            <h2 className="text-3xl font-bold mb-8 border-b border-[var(--card-border)] pb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>{t ? t.experience : "Experience"}</h2>
+            <h2 className="text-3xl font-bold mb-8 border-b border-[var(--card-border)] pb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+              {t ? t.experience : "Experience"}
+            </h2>
             {displayResume.experience.map((job, idx) => (
               <div key={idx} className="mb-8">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
@@ -107,11 +106,17 @@ export default function Resume() {
 
           {/* Honors & Recognition */}
           <section id="honors" className="scroll-mt-24">
-            <h2 className="text-3xl font-bold mb-8 border-b border-[var(--card-border)] pb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>{t ? t.honors : "Honors & Recognition"}</h2>
+            <h2 className="text-3xl font-bold mb-8 border-b border-[var(--card-border)] pb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+              {t ? t.honors : "Honors & Recognition"}
+            </h2>
             {displayResume.honors.map((honor, idx) => (
-              <div key={idx} className="mb-6">
+              <div key={idx} className={`mb-6 ${idx === 0 ? "p-6 border border-[var(--accent-color)]/40 rounded-lg bg-[var(--accent-color)]/5 relative overflow-hidden" : ""}`}>
+                {idx === 0 && <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--accent-color)] to-blue-500"></div>}
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
-                  <h3 className="text-xl font-bold text-[var(--accent-color)]">{honor.title}</h3>
+                  <h3 className="text-xl font-bold text-[var(--accent-color)] flex items-center gap-2">
+                    {idx === 0 && <span>🇸🇬</span>}
+                    {honor.title}
+                  </h3>
                   <span className="text-sm font-mono opacity-70 mt-1 md:mt-0">{honor.date}</span>
                 </div>
                 <p className="text-md font-semibold mb-2 opacity-90">{honor.organization}</p>
@@ -122,7 +127,9 @@ export default function Resume() {
 
           {/* Academic Projects */}
           <section id="academic-projects" className="scroll-mt-24">
-            <h2 className="text-3xl font-bold mb-8 border-b border-[var(--card-border)] pb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>{t ? t.projects : "Academic & Core Projects"}</h2>
+            <h2 className="text-3xl font-bold mb-8 border-b border-[var(--card-border)] pb-4" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+              {t ? t.projects : "Academic & Core Projects"}
+            </h2>
             {displayResume.academicProjects.map((project, idx) => (
               <div key={idx} className="mb-10">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">

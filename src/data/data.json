@@ -1,8 +1,8 @@
 {
   "portfolio": {
     "statusWidget": {
-      "currentFocus": "Prepping for finals and structuring final projects before transitioning into the job market.",
-      "milestone": "May 2026 Certifications",
+      "currentFocus": "Interning at Hupp Electric Motors as a solo full-stack developer — shipping a live motor inspection platform. Departing for Singapore (Gilman Scholar) on June 12, back June 27, then actively job hunting.",
+      "milestone": "Hupp Internship + Gilman Scholar — Singapore (June 12–27)",
       "active": true
     },
     "manifesto": {
@@ -11,11 +11,40 @@
     },
     "projects": [
       {
+        "id": "hupp-motor-inspection",
+        "title": "Hupp Motor Inspection Platform",
+        "status": "Live",
+        "shortDescription": "Tablet-first full-stack QC platform replacing paper motor inspections at an electric motor repair facility. Schema-driven forms, ERP integration, PDF certificate generation, and a no-code admin editor — built and deployed solo in under two months.",
+        "techStack": [
+          "React",
+          "TypeScript",
+          "ASP.NET Core",
+          "SQL Server",
+          "EF Core"
+        ],
+        "quickLinks": {
+          "github": "#",
+          "live": "#"
+        },
+        "deepDive": {
+          "overview": "A tablet-first internal web application for shop-floor technicians at Hupp Electric Motors. Built to replace a manual, paper-based motor inspection process with a guided digital workflow that captures inspection data, validates it, and auto-generates QC documentation across the full repair lifecycle of every motor — from Disassembly through Assembly.",
+          "theProblem": "Technicians were completing motor inspections on paper, creating risk of lost documentation, incomplete QC sign-offs, and hours of manual certificate generation. There was no connection to the existing ERP system, meaning job information was re-keyed by hand. Non-developers had no way to update inspection content without requesting a code change.",
+          "theSolution": "Architected and solo-built a self-contained .NET 10 / ASP.NET Core backend serving a compiled React + TypeScript SPA from the same origin. Integrated directly into the company ERP via a read-only SQL Server connection to pull live motor jobs by department. Built a schema-driven dynamic form engine with conditional logic, continuous autosave, and a full server-side validation pipeline. Deployed as a live Windows service (NSSM) on a company server — shipped from zero to production in under two months.",
+          "techStackDetails": "Frontend: Vite + React + TypeScript + Tailwind CSS v4, React Query, React Router, React Context, lucide-react. Backend: ASP.NET Core Web API (.NET 10), Entity Framework Core (code-first migrations), dual SQL Server connections (read/write inspection DB + read-only ERP). PDF generation via MigraDoc/PDFsharp server-side. Tooling: Visual Studio, VS Code, Git/GitHub (separate private repos for frontend and backend), SSMS, NSSM for Windows service registration.",
+          "futureGoals": "Complete inspection schema authoring for remaining departments (Wash Bay, Burnout, Rewind, Machine Shop, Fabrication). Introduce photo checkpoint uploads for visual inspection evidence. Add reporting dashboards for QC managers to track inspection completion rates and technician activity across departments."
+        }
+      },
+      {
         "id": "universal-repair-tickets",
         "title": "Universal Repair Tickets",
         "status": "MVP",
         "shortDescription": "A multi-tenant SaaS repair platform automating workflows for a local business. Features dynamic Kanban boards and automated client communications.",
-        "techStack": ["React 18", "Tailwind CSS", "Supabase", "PostgreSQL"],
+        "techStack": [
+          "React 18",
+          "Tailwind CSS",
+          "Supabase",
+          "PostgreSQL"
+        ],
         "quickLinks": {
           "github": "https://github.com/JanMarte/universal-repair-tickets",
           "live": "https://universal-repair-tickets.vercel.app/"
@@ -33,7 +62,12 @@
         "title": "Wedding Venue POS System",
         "status": "MVP",
         "shortDescription": "Point-of-Sale application handling live session timers, dynamic tax calculations, and split-check capabilities to automate workflows for a local venue.",
-        "techStack": ["React", "Vite", "Supabase", "PostgreSQL"],
+        "techStack": [
+          "React",
+          "Vite",
+          "Supabase",
+          "PostgreSQL"
+        ],
         "quickLinks": {
           "github": "https://github.com/JanMarte/POS_System",
           "live": "https://jan-wedding-bar.vercel.app/"
@@ -51,7 +85,12 @@
         "title": "Beverage API SaaS",
         "status": "MVP",
         "shortDescription": "A decoupled full-stack SaaS platform utilizing a Java backend and React frontend to deliver a monetized, secure recipe platform.",
-        "techStack": ["Java", "Spring Boot", "React", "Stripe API"],
+        "techStack": [
+          "Java",
+          "Spring Boot",
+          "React",
+          "Stripe API"
+        ],
         "quickLinks": {
           "github": "#",
           "live": "#"
@@ -69,7 +108,12 @@
         "title": "Timber & Tools E-Commerce",
         "status": "Active Dev",
         "shortDescription": "Localized multi-tenant e-commerce marketplace featuring direct lumber sales and a real-time threaded messaging engine.",
-        "techStack": ["C#", "ASP.NET Core", "Entity Framework", "Supabase"],
+        "techStack": [
+          "C#",
+          "ASP.NET Core",
+          "Entity Framework",
+          "Supabase"
+        ],
         "quickLinks": {
           "github": "https://github.com/JanMarte/MillAuction",
           "live": "#"
@@ -87,7 +131,12 @@
         "title": "GOAT Coach Predictive Engine",
         "status": "Beta",
         "shortDescription": "High-frequency predictive engine processing a 60+ feature Monte Carlo simulation to identify real-time market inefficiencies in sports data.",
-        "techStack": ["Python", ".NET MAUI", "NumPy", "REST APIs"],
+        "techStack": [
+          "Python",
+          ".NET MAUI",
+          "NumPy",
+          "REST APIs"
+        ],
         "quickLinks": {
           "github": "#",
           "live": "#"
@@ -111,7 +160,12 @@
         "Logitech G703 Lightspeed Wireless Gaming Mouse",
         "Logitech G815 LIGHTSYNC RGB Mechanical Keyboard"
       ],
-      "software": ["Visual Studio", "IntelliJ IDEA", "VS Code", "Postman"],
+      "software": [
+        "Visual Studio",
+        "IntelliJ IDEA",
+        "VS Code",
+        "Postman"
+      ],
       "vibe": {
         "fuel": "Coffee or Energy Drinks",
         "music": "Bad Bunny"
@@ -122,13 +176,15 @@
         "quote": "\"You will continue to suffer if you have an emotional reaction to everything that is said to you...\" - Bruce Lee",
         "quote2": "\"Always be yourself, express yourself, have faith in yourself...\" - Bruce Lee",
         "quote3": "\"A quick temper will make a fool of you soon enough.\" - Bruce Lee",
-        
-        "whoami": "Jan Marte. Full-Stack Developer bridging modern frontend experiences with robust backend architecture.",
+        "whoami": "Jan Marte. Full-Stack Developer. Currently interning at Hupp Electric Motors — solo-building a live motor inspection platform. Gilman Scholar, departing Singapore June 12.",
         "skills": "SYSTEM CHECK... [React] [C#] [Java] [PostgreSQL] [Supabase] [Tailwind] - All systems nominal and ready for deployment.",
         "contact": "Establishing secure connection... \nEmail: janmmarte16@gmail.com \nGitHub: https://github.com/JanMarte \nLinkedIn: https://www.linkedin.com/in/janmmarte/",
+        "singapore": "MISSION BRIEFING — June 12, 2026\nDestination: Singapore\nProgram: Gilman Scholar — AI & Project Management Intensive\nInstitution: Singapore Management University\nSponsor: U.S. Department of State\nReturn Date: June 27\nStatus: DEPARTING SOON\nObjective: AI applications, global PM frameworks, international perspective.\nETA back at the terminal: June 27.",
         "sudo": "Nice try. This incident will be reported.",
         "matrix": "Wake up, Neo... The Matrix has you. Follow the white rabbit.",
-        "coffee": "Error 418: I'm a teapot. Cannot brew coffee. Please initiate manual caffeine sequence."
+        "coffee": "Error 418: I'm a teapot. Cannot brew coffee. Please initiate manual caffeine sequence.",
+        "hupp": "SYSTEM: Hupp Electric Motors — Motor Inspection Platform\nStatus: LIVE IN PRODUCTION\nStack: React + TypeScript + ASP.NET Core (.NET 10) + SQL Server\nBuilt solo from zero to deployed in under 2 months.\nERP integration: active. PDF cert generation: active. No-code schema editor: active.\nPaper inspections: eliminated.",
+        "help": "Available commands: whoami, skills, contact, hupp, singapore, resume, matrix, coffee, theme, clear, exit, sudo"
       }
     },
     "resume": {
@@ -138,23 +194,38 @@
           "school": "Kirkwood Community College, Cedar Rapids, IA",
           "date": "Expected May 2027",
           "details": [
-            "Certifications: Java Programming, .NET Programming (2026); Full Stack Developer (2027)",
-            "Gilman Scholar (Study Abroad – Singapore): Selected for a highly competitive, two-week intensive program focusing on AI & Project Management. (June 2026)"
+            "Certifications: Java Programming (2026), .NET Programming (2026); Full Stack Developer (Expected 2027)",
+            "Gilman Scholar — Study Abroad (Singapore, June 2026): Selected for a highly competitive, intensive program at Singapore Management University focusing on Artificial Intelligence applications and Project Management frameworks within a global context. Departs June 12, returns June 27."
           ]
         }
       ],
       "skills": {
         "Languages & Frameworks": "Java, C# (.NET, ASP.NET Core MVC), JavaScript, Python, HTML5, CSS3, React.js, TypeScript, Spring Boot, Vite, Bootstrap 5, Entity Framework Core, Tailwind CSS",
         "Databases & Integrations": "PostgreSQL, Supabase, MySQL, T-SQL, ADO.NET, JDBC, RESTful API Design, Enterprise SaaS APIs (Stripe, Twilio), Data Aggregation APIs (MLB Stats, OpenWeatherMap, PropOdds, RapidAPI, Google Search API)",
-        "AI & Platforms": "Predictive Modeling & Algorithms (Monte Carlo, NumPy, Numba), Web SaaS Architecture, Cross-Platform Mobile (.Net MAUI), Azure Container Apps, Docker, GitHub Actions (CI/CD), Vercel",
+        "AI & Platforms": "Predictive Modeling & Algorithms (Monte Carlo, NumPy, Numba), AI Applications & Ethics (Gilman Scholar, Singapore 2026), Web SaaS Architecture, Cross-Platform Mobile (.Net MAUI), Azure Container Apps, Docker, GitHub Actions (CI/CD), Vercel",
         "Tools & Other": "Visual Studio, IntelliJ IDEA, VS Code, Unit Testing, Git, GitHub (Projects), CI/CD Automation, Azure, Postman, Cloudflare Turnstile, Data Analysis, Windows Batch Scripting, Agile/Scrum",
-        "Personality Traits": "Bilingual (Spanish/English), Personable, Communicative, Team-Collaborator"
+        "Personality Traits": "Bilingual (Spanish/English), Personable, Communicative, Team-Collaborator, Globally-Minded"
       },
       "experience": [
         {
+          "role": "Software Developer Intern",
+          "company": "Hupp Electric Motors | Marion, IA",
+          "date": "May 2025 – Present",
+          "bullets": [
+            "Sole developer on a full-stack tablet-first Motor Inspection Platform — designed, built, and deployed end-to-end in under two months, replacing a manual paper-based QC process on the shop floor.",
+            "Architected a self-contained .NET 10 / ASP.NET Core Web API backend serving a compiled React + TypeScript frontend from the same origin, deployed as a live Windows service via NSSM on a company server.",
+            "Integrated directly into the company ERP (read-only SQL Server connection) to pull real motor jobs by department, eliminating all duplicate data entry for technicians.",
+            "Built a schema-driven dynamic form engine — inspection questions are grouped into tabs with conditional display logic, live progress tracking, and continuous autosave so no draft work is ever lost.",
+            "Engineered a full server-side validation pipeline (required fields, display-logic-aware, valid dropdown options) with per-field inline error highlighting and auto-navigation to the first failing group.",
+            "Implemented one-tap QC certificate generation producing multi-page PDFs via MigraDoc/PDFsharp, automating a previously manual documentation process.",
+            "Built a no-code schema editor allowing admins to create, reorder, and manage inspection questions per department without any code changes or redeployment.",
+            "Delivered a complete UI/UX redesign across every page of the application and authored full server deployment and handoff documentation for the operations team."
+          ]
+        },
+        {
           "role": "IT Support Specialist",
           "company": "Amana Society, Inc. | Amana, IA",
-          "date": "March 2023 - 2025",
+          "date": "March 2023 – 2025",
           "bullets": [
             "Provided responsive IT support and troubleshooting for hardware and software issues to ensure smooth daily operations across the organization.",
             "Leveraged strong interpersonal skills to translate technical problems and solutions effectively for non-technical and technical staff.",
@@ -164,15 +235,21 @@
       ],
       "honors": [
         {
-          "title": "Eagle Leadership Program - (Bronze Level Award)",
+          "title": "Gilman Scholar — Study Abroad Grant",
+          "organization": "U.S. Department of State / Institute of International Education",
+          "date": "June 2026",
+          "description": "Competitively selected U.S. government scholarship recipient for an intensive two-week program at Singapore Management University, focused on Artificial Intelligence applications and global Project Management frameworks. Departing June 12, returning June 27."
+        },
+        {
+          "title": "Eagle Leadership Program — Bronze Level Award",
           "organization": "Kirkwood Community College",
-          "date": "2024 - 2025",
+          "date": "2024 – 2025",
           "description": "Recognized for active engagement and consistent participation in diverse educational, cultural, and community-building events across campus."
         },
         {
-          "title": "Dean’s List",
+          "title": "Dean's List",
           "organization": "Kirkwood Community College",
-          "date": "2024 - 2025",
+          "date": "2024 – 2025",
           "description": "Recognized for outstanding academic achievement and maintaining a high GPA throughout the academic year."
         }
       ],
@@ -180,7 +257,7 @@
         {
           "title": "Java Application Development",
           "tech": "Java SE, Java EE, Java Servlets, JSP, JDBC, Docker, Microsoft Azure",
-          "date": "2023–Present",
+          "date": "2023 – Present",
           "bullets": [
             "Designed, coded, and tested object-oriented Java applications across three courses (Java I, II, III), progressing from core OOP principles through web-based Java and cloud deployment.",
             "Developed Java web applications using Java Servlets and JSP; containerized applications with Docker and deployed to Microsoft Azure cloud infrastructure.",
@@ -190,7 +267,7 @@
         {
           "title": ".NET / C# Application Development",
           "tech": "C#, ASP.NET Core MVC, Visual Studio, T-SQL, SQL Server",
-          "date": "2023–Present",
+          "date": "2023 – Present",
           "bullets": [
             "Designed, coded, and unit-tested C# applications across three courses (.NET Development I, II, III) using Visual Studio 2022.",
             "Developed data-driven web applications integrating T-SQL stored procedures, parameterized queries, and SQL Server relational database back-ends.",
@@ -223,7 +300,7 @@
           "copyright": "Arquitectado con React y Tailwind v4."
         },
         "home": {
-          "available": "🟢 Disponible para roles desde Mayo 2026",
+          "available": "🟢 Disponible para roles — buscando activamente",
           "whoAmI": "Quién Soy",
           "viewResume": "Ver Currículum",
           "featuredArch": "Arquitectura Destacada"
@@ -259,23 +336,38 @@
               "school": "Kirkwood Community College, Cedar Rapids, IA",
               "date": "Esperado Mayo 2027",
               "details": [
-                "Certificaciones: Programación en Java, Programación .NET (2026); Desarrollador Full Stack (2027)",
-                "Becario Gilman (Estudio en el extranjero – Singapur): Seleccionado para un programa intensivo muy competitivo enfocado en Inteligencia Artificial y Gestión de Proyectos. (Junio 2026)"
+                "Certificaciones: Programación en Java (2026), Programación .NET (2026); Desarrollador Full Stack (Esperado 2027)",
+                "Becario Gilman — Estudio en el Extranjero (Singapur, Junio 2026): Seleccionado para un programa intensivo muy competitivo en Singapore Management University enfocado en IA y Gestión de Proyectos. Sale el 12 de junio, regresa el 27."
               ]
             }
           ],
           "skills": {
             "Lenguajes y Frameworks": "Java, C# (.NET, ASP.NET Core MVC), JavaScript, Python, HTML5, CSS3, React.js, TypeScript, Spring Boot, Vite, Bootstrap 5, Entity Framework Core, Tailwind CSS",
             "Bases de Datos e Integraciones": "PostgreSQL, Supabase, MySQL, T-SQL, ADO.NET, JDBC, Diseño API RESTful, APIs SaaS (Stripe, Twilio), APIs de Datos (MLB Stats, OpenWeatherMap, PropOdds, RapidAPI, Google Search API)",
-            "IA y Plataformas": "Modelado Predictivo y Algoritmos (Monte Carlo, NumPy, Numba), Arquitectura SaaS, Móvil Multiplataforma (.Net MAUI), Azure Container Apps, Docker, GitHub Actions (CI/CD), Vercel",
+            "IA y Plataformas": "Modelado Predictivo y Algoritmos (Monte Carlo, NumPy, Numba), Aplicaciones de IA y Ética (Becario Gilman, Singapur 2026), Arquitectura SaaS, Móvil Multiplataforma (.Net MAUI), Azure Container Apps, Docker, GitHub Actions (CI/CD), Vercel",
             "Herramientas y Otros": "Visual Studio, IntelliJ IDEA, VS Code, Pruebas Unitarias, Git, GitHub (Proyectos), Automatización CI/CD, Azure, Postman, Cloudflare Turnstile, Análisis de Datos, Agile/Scrum",
-            "Habilidades Blandas": "Bilingüe (Español/Inglés), Sociable, Comunicativo, Colaborador de Equipo"
+            "Habilidades Blandas": "Bilingüe (Español/Inglés), Sociable, Comunicativo, Colaborador de Equipo, Mentalidad Global"
           },
           "experience": [
             {
+              "role": "Pasante de Desarrollo de Software",
+              "company": "Hupp Electric Motors | Marion, IA",
+              "date": "Mayo 2025 – Presente",
+              "bullets": [
+                "Único desarrollador de una Plataforma de Inspección de Motores full-stack optimizada para tablets — diseñada, construida y desplegada de principio a fin en menos de dos meses, reemplazando un proceso QC manual en papel.",
+                "Arquitecturé un backend .NET 10 / ASP.NET Core autónomo que sirve un frontend React + TypeScript compilado desde el mismo origen, desplegado como servicio Windows activo via NSSM.",
+                "Integración directa con el ERP de la empresa (conexión SQL Server de solo lectura) para obtener trabajos de motores reales por departamento, eliminando toda la entrada de datos duplicada.",
+                "Construí un motor de formularios dinámicos impulsado por esquemas — preguntas agrupadas en pestañas con lógica de visualización condicional, seguimiento de progreso en vivo y autoguardado continuo.",
+                "Implementé un pipeline de validación completo del lado del servidor con resaltado de errores inline por campo y navegación automática al primer grupo con errores.",
+                "Generación de certificados QC con un solo toque produciendo PDFs de múltiples páginas via MigraDoc/PDFsharp, automatizando un proceso de documentación previamente manual.",
+                "Editor de esquemas sin código que permite a los administradores gestionar preguntas de inspección por departamento sin cambios de código ni redespliegue.",
+                "Rediseño completo de UI/UX en todas las páginas y documentación de despliegue del servidor para el equipo de operaciones."
+              ]
+            },
+            {
               "role": "Especialista en Soporte de TI",
               "company": "Amana Society, Inc. | Amana, IA",
-              "date": "Marzo 2023 - 2025",
+              "date": "Marzo 2023 – 2025",
               "bullets": [
                 "Proporcioné soporte técnico receptivo y resolución de problemas de hardware y software para asegurar el buen funcionamiento de las operaciones diarias en toda la organización.",
                 "Aproveché mis fuertes habilidades interpersonales para traducir problemas y soluciones técnicas de manera efectiva tanto para el personal técnico como para el no técnico.",
@@ -285,15 +377,21 @@
           ],
           "honors": [
             {
-              "title": "Programa de Liderazgo Eagle - (Premio Nivel Bronce)",
+              "title": "Becario Gilman — Beca de Estudio en el Extranjero",
+              "organization": "Departamento de Estado de EE.UU. / Instituto de Educación Internacional",
+              "date": "Junio 2026",
+              "description": "Seleccionado competitivamente como becario del gobierno estadounidense para un programa intensivo de dos semanas en Singapore Management University, enfocado en aplicaciones de Inteligencia Artificial y marcos globales de Gestión de Proyectos. Sale el 12 de junio, regresa el 27."
+            },
+            {
+              "title": "Programa de Liderazgo Eagle — Premio Nivel Bronce",
               "organization": "Kirkwood Community College",
-              "date": "2024 - 2025",
+              "date": "2024 – 2025",
               "description": "Reconocido por la participación activa y constante en diversos eventos educativos, culturales y de construcción de comunidad en el campus."
             },
             {
               "title": "Lista del Decano",
               "organization": "Kirkwood Community College",
-              "date": "2024 - 2025",
+              "date": "2024 – 2025",
               "description": "Reconocido por un desempeño académico sobresaliente y por mantener un promedio general (GPA) alto durante el año académico."
             }
           ],
@@ -301,21 +399,21 @@
             {
               "title": "Desarrollo de Aplicaciones en Java",
               "tech": "Java SE, Java EE, Java Servlets, JSP, JDBC, Docker, Microsoft Azure",
-              "date": "2023–Presente",
+              "date": "2023 – Presente",
               "bullets": [
-                "Diseñé, programé y probé aplicaciones Java orientadas a objetos a través de tres cursos (Java I, II, III), avanzando desde principios fundamentales de POO hasta implementaciones web y despliegue en la nube.",
-                "Desarrollé aplicaciones web en Java utilizando Servlets y JSP; atomicé aplicaciones con Docker y las desplegué en la infraestructura de la nube de Microsoft Azure.",
+                "Diseñé, programé y probé aplicaciones Java orientadas a objetos a través de tres cursos (Java I, II, III).",
+                "Desarrollé aplicaciones web en Java utilizando Servlets y JSP; atomicé aplicaciones con Docker y las desplegué en Microsoft Azure.",
                 "Creé diagramas de clases UML, diagramas de actividades e historias de usuario para cada fase del proyecto."
               ]
             },
             {
               "title": "Desarrollo de Aplicaciones .NET / C#",
               "tech": "C#, ASP.NET Core MVC, Visual Studio, T-SQL, SQL Server",
-              "date": "2023–Presente",
+              "date": "2023 – Presente",
               "bullets": [
-                "Diseñé, programé y realicé pruebas unitarias de aplicaciones en C# a lo largo de tres cursos (Desarrollo .NET I, II, III) utilizando Visual Studio 2022.",
-                "Desarrollé aplicaciones web orientadas a datos integrando procedimientos almacenados en T-SQL, consultas parametrizadas y bases de datos relacionales SQL Server en el backend.",
-                "Escribí historias de usuario, requerimientos MVP, diagramas de actividades, diagramas de clases UML y wireframes para cada proyecto."
+                "Diseñé, programé y realicé pruebas unitarias de aplicaciones en C# a lo largo de tres cursos usando Visual Studio 2022.",
+                "Desarrollé aplicaciones web orientadas a datos integrando procedimientos almacenados en T-SQL y bases de datos SQL Server.",
+                "Escribí historias de usuario, diagramas de actividades, diagramas UML y wireframes para cada proyecto."
               ]
             },
             {
@@ -323,16 +421,16 @@
               "tech": "MySQL, SQL, DDL/DML, Diagramas Entidad-Relación, Normalización (3NF)",
               "date": "2024",
               "bullets": [
-                "Diseñé e implementé bases de datos relacionales normalizadas a partir de requisitos comerciales, modelando diagramas ER, diseñando esquemas y programando el código SQL DDL/DML completo en MySQL.",
-                "Elaboré documentación de diseño completa incluyendo diagramas Entidad-Relación, diccionarios de datos y análisis de normalización hasta la Tercera Forma Normal (3NF)."
+                "Diseñé e implementé bases de datos relacionales normalizadas a partir de requisitos comerciales en MySQL.",
+                "Elaboré documentación completa incluyendo diagramas ER, diccionarios de datos y análisis de normalización hasta la 3NF."
               ]
             }
           ]
         },
         "about": {
           "statusWidget": {
-            "currentFocus": "Preparándome para los exámenes finales y estructurando mis últimos proyectos antes de tirarme al mercado laboral.",
-            "milestone": "Certificaciones en Mayo 2026"
+            "currentFocus": "Internado en Hupp Electric Motors como desarrollador full-stack en solitario — lanzando una plataforma de inspección de motores en producción. Partiendo a Singapur (Becario Gilman) el 12 de junio, regreso el 27, luego a buscar trabajo.",
+            "milestone": "Internado en Hupp + Becario Gilman — Singapur (12–27 de Junio)"
           },
           "manifestoTitle": "Por Qué Yo Construyo",
           "manifestoBody": "Soy un estudiante de desarrollo enfocado en hacer un impacto real en mi comunidad, no un freelancer buscando cobrar. Me dedico a crear aplicaciones de nivel empresarial para ayudar a personas y negocios locales que no tienen el presupuesto para softwares millonarios. Me gusta conectar con ellos, entender su estilo de vida y su negocio, y automatizar su entorno para que puedan enfocarse en lo que de verdad importa.",
@@ -340,8 +438,9 @@
             "journeyTitle": "El Comienzo",
             "journeyP1": "Mi transición a la ingeniería de software nació de mi experiencia dando soporte técnico en Amana Society. Arreglar problemas de hardware y software me enseñó una lección clave: la tecnología solo es buena si la gente la sabe usar.",
             "journeyP2": "Uso mis habilidades interpersonales para traducir problemas técnicos complejos a soluciones claras, tanto para el equipo técnico como para el resto del staff. Como desarrollador bilingüe (Español/Inglés), me encanta romper las barreras de comunicación y crear entornos digitales que de verdad le faciliten la vida a la gente.",
-            "perspectiveTitle": "Visión Global y la IA",
-            "perspectiveP1": "Más allá del código, estoy enfocado en el liderazgo y el futuro de la tecnología. Fui seleccionado como Gilman Scholar para un programa intensivo súper competitivo en Singapur (Junio 2026), enfocado estrictamente en Inteligencia Artificial y Gestión de Proyectos. Esta experiencia global define directamente cómo diseño soluciones escalables para el futuro."
+            "perspectiveTitle": "Singapur y la IA",
+            "perspectiveP1": "En junio de 2026, fui seleccionado como Becario Gilman para un programa intensivo de dos semanas en Singapore Management University. El programa fue exclusivamente sobre Inteligencia Artificial y Gestión de Proyectos — rodeado de perspectivas internacionales que cambiaron directamente cómo pienso sobre arquitectura de software escalable.",
+            "perspectiveP2": "Singapur no es solo un logro en mi currículum. Es un cambio de perspectiva: ver cómo los equipos de tecnología a nivel global abordan los mismos problemas que yo estoy construyendo para comunidades locales. Eso es algo que cargo en cada línea de código que escribo ahora."
           }
         },
         "projects": {
@@ -360,44 +459,55 @@
             "title": "Sistema POS para Bodas",
             "shortDescription": "Punto de venta (POS) que maneja temporizadores en vivo, cálculos de impuestos dinámicos y división de cuentas para automatizar el trabajo en un local de bodas.",
             "deepDive": {
-              "overview": "Una aplicación de Punto de Venta (POS) localizada y diseñada específicamente para las necesidades únicas de locales de eventos, manejando temporizadores, lógica de impuestos dinámicos y división de transacciones.",
-              "theProblem": "El local batallaba con sistemas POS genéricos que no podían manejar división de cuentas en medio del evento, cálculos de tarifas por hora dinámicas, ni reglas de impuestos locales sin requerir ajustes manuales.",
-              "theSolution": "Desarrollé una interfaz POS personalizada utilizando React y Vite para una experiencia hiper rápida. Integré temporizadores de sesión en vivo que calculan costos automáticamente basados en el uso del local, junto a un sistema complejo de estado para dividir cuentas al instante.",
-              "techStackDetails": "Impulsado por una base de datos PostgreSQL vía Supabase para sincronización de transacciones en tiempo real. La interfaz de usuario está optimizada para terminales de pantalla táctil.",
-              "futureGoals": "Implementar capacidades fuera de línea (offline-first) usando service workers para prevenir pérdida de datos durante caídas de red, y añadir rastreo de inventario en tiempo real para el bar."
+              "overview": "Una aplicación de Punto de Venta (POS) localizada y diseñada específicamente para las necesidades únicas de locales de eventos.",
+              "theProblem": "El local batallaba con sistemas POS genéricos que no podían manejar división de cuentas en medio del evento ni tarifas dinámicas por hora sin ajustes manuales.",
+              "theSolution": "Desarrollé una interfaz POS personalizada con React y Vite. Integré temporizadores de sesión en vivo y un sistema de estado complejo para dividir cuentas al instante.",
+              "techStackDetails": "Impulsado por PostgreSQL vía Supabase para sincronización en tiempo real. UI optimizada para terminales de pantalla táctil.",
+              "futureGoals": "Implementar capacidades offline-first usando service workers y añadir rastreo de inventario en tiempo real para el bar."
             }
           },
           "beverage-api": {
             "title": "API de Bebidas SaaS",
             "shortDescription": "Plataforma SaaS full-stack desacoplada usando un backend en Java y un frontend en React para ofrecer un sistema de recetas monetizado y seguro.",
             "deepDive": {
-              "overview": "Una plataforma SaaS full-stack desacoplada que provee una API monetizada, segura y de fácil búsqueda para recetas de bebidas y datos de mixología.",
-              "theProblem": "Desarrolladores aficionados y bares locales necesitaban una base de datos estructurada para recetas, pero las APIs existentes estaban mal documentadas, eran caras o carecían de un portal moderno para gestionar llaves API.",
-              "theSolution": "Ingenié un backend robusto en Java usando Spring Boot para que sirviera como la API principal, emparejado con un frontend en React actuando como el portal para desarrolladores. Implementé generación segura de llaves API y un modelo de suscripción escalonada.",
-              "techStackDetails": "La arquitectura backend presenta Java, Spring Boot y Spring Security, manejando políticas estrictas de CORS y autenticación JWT. El frontend usa React para mostrar documentación interactiva y gestionar las suscripciones.",
-              "futureGoals": "Introducir soporte GraphQL para consultas de datos más precisas, expandir el conjunto de datos mediante agregación automática y crear funciones para que la comunidad califique nuevas recetas."
+              "overview": "Una plataforma SaaS full-stack desacoplada que provee una API monetizada, segura y de fácil búsqueda para recetas de bebidas.",
+              "theProblem": "Desarrolladores aficionados y bares locales necesitaban una base de datos estructurada para recetas, pero las APIs existentes estaban mal documentadas o eran caras.",
+              "theSolution": "Backend robusto en Java con Spring Boot como API principal, emparejado con un portal para desarrolladores en React. Generación segura de llaves API y modelo de suscripción escalonada.",
+              "techStackDetails": "Java, Spring Boot y Spring Security manejando CORS estricto y autenticación JWT. React para documentación interactiva y gestión de suscripciones.",
+              "futureGoals": "Introducir soporte GraphQL, expandir el dataset mediante agregación automática y crear funciones comunitarias para calificar recetas."
             }
           },
           "timber-n-tools": {
             "title": "E-Commerce Timber & Tools",
             "shortDescription": "Mercado de comercio electrónico multi-inquilino localizado, con venta directa de madera y un motor de mensajería en tiempo real.",
             "deepDive": {
-              "overview": "Un mercado de comercio electrónico multi-inquilino localizado, diseñado específicamente para ventas directas de madera, que cuenta con un motor de mensajería en tiempo real que conecta a compradores y proveedores.",
-              "theProblem": "Los aserraderos locales y trabajadores de madera independientes carecían de una plataforma dedicada y transparente para comprar y vender materiales, dependiendo de redes sociales ineficientes.",
-              "theSolution": "Construí una aplicación web MVC robusta utilizando C# y ASP.NET Core para manejar estructuras de inventario complejas como cálculos de pies tablares. Integré un sistema de mensajería en tiempo real para negociaciones directas.",
-              "techStackDetails": "Utilicé C#, ASP.NET Core MVC y Entity Framework Core para un modelado estricto de datos en el backend. Conectado a una base de datos Supabase PostgreSQL usando variables de entorno seguras.",
-              "futureGoals": "Implementar un algoritmo de precios dinámicos basado en las tarifas actuales del mercado maderero e integrar una búsqueda de radio geográfico para conectar compradores con los aserraderos locales más cercanos."
+              "overview": "Un mercado multi-inquilino localizado para ventas directas de madera, con motor de mensajería en tiempo real entre compradores y proveedores.",
+              "theProblem": "Los aserraderos locales carecían de una plataforma dedicada para comprar y vender materiales, dependiendo de redes sociales ineficientes.",
+              "theSolution": "Construí una app MVC con C# y ASP.NET Core para manejar inventarios complejos (pies tablares, especies de madera) e integré mensajería en tiempo real.",
+              "techStackDetails": "C#, ASP.NET Core MVC y Entity Framework Core. Conectado a Supabase PostgreSQL con variables de entorno seguras. UI responsiva para compras móviles.",
+              "futureGoals": "Algoritmo de precios dinámicos basado en el mercado maderero actual e integrar búsqueda por radio geográfico."
             }
           },
           "goat-coach": {
             "title": "Motor Predictivo GOAT Coach",
-            "shortDescription": "Motor predictivo de alta frecuencia que procesa simulaciones de Monte Carlo con más de 60 variables para encontrar ineficiencias del mercado en vivo en datos deportivos.",
+            "shortDescription": "Motor predictivo de alta frecuencia que procesa simulaciones de Monte Carlo con más de 60 variables para encontrar ineficiencias del mercado en datos deportivos.",
             "deepDive": {
-              "overview": "Un motor de análisis predictivo de alta frecuencia que aprovecha simulaciones de Monte Carlo y principios de aprendizaje automático para identificar ineficiencias de mercado en tiempo real en datos deportivos.",
-              "theProblem": "Las plataformas estándar de análisis deportivo proporcionan datos históricos pero carecen de modelado predictivo en tiempo real capaz de procesar múltiples variables en vivo (clima, lesiones, probabilidades en vivo) para encontrar ventajas de valor.",
-              "theSolution": "Ingenié un motor de procesamiento basado en Python que ingiere datos de múltiples APIs REST. Diseñé un algoritmo que ejecuta una simulación de Monte Carlo con más de 60 variables a través de miles de iteraciones.",
-              "techStackDetails": "Construí la lógica de simulación central usando Python, NumPy y Numba para un procesamiento matemático de alto rendimiento. Conectado a un frontend móvil multiplataforma .NET MAUI para mostrar las matrices de probabilidad.",
-              "futureGoals": "Transicionar el motor de simulación a Azure Container Apps para procesamiento en la nube escalable, e introducir modelos de aprendizaje profundo (TensorFlow) para pesar las variables dinámicamente según las tendencias de la temporada."
+              "overview": "Un motor de análisis predictivo que aprovecha simulaciones de Monte Carlo para identificar ineficiencias de mercado en tiempo real en datos deportivos.",
+              "theProblem": "Las plataformas estándar de análisis deportivo carecen de modelado predictivo en tiempo real capaz de procesar múltiples variables en vivo simultáneamente.",
+              "theSolution": "Motor en Python que ingiere datos de múltiples APIs REST y ejecuta simulaciones de Monte Carlo con más de 60 variables a través de miles de iteraciones.",
+              "techStackDetails": "Python, NumPy y Numba para procesamiento matemático de alto rendimiento. Frontend móvil multiplataforma en .NET MAUI para mostrar matrices de probabilidad.",
+              "futureGoals": "Transicionar a Azure Container Apps y añadir modelos de deep learning con TensorFlow para pesar variables dinámicamente."
+            }
+          },
+          "hupp-motor-inspection": {
+            "title": "Plataforma de Inspección de Motores Hupp",
+            "shortDescription": "Plataforma QC full-stack optimizada para tablets que reemplaza las inspecciones manuales en papel en un taller de reparación de motores eléctricos. Formularios dinámicos, integración con ERP, generación de certificados PDF y editor sin código — construida y desplegada en solitario en menos de dos meses.",
+            "deepDive": {
+              "overview": "Una aplicación web interna optimizada para tablets para técnicos en el piso de trabajo de Hupp Electric Motors. Diseñada para reemplazar un proceso de inspección manual en papel por un flujo digital guiado que captura datos, los valida y genera documentación QC automáticamente a lo largo del ciclo de reparación completo de cada motor.",
+              "theProblem": "Los técnicos completaban las inspecciones en papel, creando riesgo de documentación perdida, aprobaciones QC incompletas y horas de generación manual de certificados. No había conexión con el sistema ERP existente, lo que significaba que la información de los trabajos se volvía a ingresar a mano.",
+              "theSolution": "Diseñé y construí en solitario un backend .NET 10 / ASP.NET Core que sirve un SPA React + TypeScript compilado desde el mismo origen. Integré directamente con el ERP de la empresa mediante una conexión SQL Server de solo lectura. Construí un motor de formularios dinámicos con lógica condicional, autoguardado continuo y un pipeline completo de validación del lado del servidor. Desplegado como servicio Windows activo en menos de dos meses.",
+              "techStackDetails": "Frontend: Vite + React + TypeScript + Tailwind CSS v4, React Query, React Router. Backend: ASP.NET Core Web API (.NET 10), Entity Framework Core, conexiones duales SQL Server. Generación de PDF vía MigraDoc/PDFsharp. Herramientas: Visual Studio, VS Code, Git/GitHub, SSMS, NSSM.",
+              "futureGoals": "Completar el esquema de inspección para los departamentos restantes. Agregar carga de fotos para evidencia visual. Añadir paneles de reportes para gerentes de QC."
             }
           }
         }
