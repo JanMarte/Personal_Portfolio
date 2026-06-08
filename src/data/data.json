@@ -1,8 +1,8 @@
 {
   "portfolio": {
     "statusWidget": {
-      "currentFocus": "Interning at Hupp Electric Motors as a solo full-stack developer — shipping a live motor inspection platform. Departing for Singapore (Gilman Scholar) on June 12, back June 27, then actively job hunting.",
-      "milestone": "Hupp Internship + Gilman Scholar — Singapore (June 12–27)",
+      "currentFocus": "Currently the sole developer on a live motor inspection platform at Hupp Electric Motors, shipping production features on a weekly cycle. Actively seeking full-stack roles for after June 27.",
+      "milestone": "Software Developer Intern @ Hupp Electric Motors",
       "active": true
     },
     "manifesto": {
@@ -429,8 +429,8 @@
         },
         "about": {
           "statusWidget": {
-            "currentFocus": "Internado en Hupp Electric Motors como desarrollador full-stack en solitario — lanzando una plataforma de inspección de motores en producción. Partiendo a Singapur (Becario Gilman) el 12 de junio, regreso el 27, luego a buscar trabajo.",
-            "milestone": "Internado en Hupp + Becario Gilman — Singapur (12–27 de Junio)"
+            "currentFocus": "Actualmente el único desarrollador de una plataforma de inspección de motores en producción en Hupp Electric Motors, lanzando funciones nuevas cada semana. Buscando activamente roles full-stack para después del 27 de junio.",
+            "milestone": "Pasante de Desarrollo de Software @ Hupp Electric Motors"
           },
           "manifestoTitle": "Por Qué Yo Construyo",
           "manifestoBody": "Soy un estudiante de desarrollo enfocado en hacer un impacto real en mi comunidad, no un freelancer buscando cobrar. Me dedico a crear aplicaciones de nivel empresarial para ayudar a personas y negocios locales que no tienen el presupuesto para softwares millonarios. Me gusta conectar con ellos, entender su estilo de vida y su negocio, y automatizar su entorno para que puedan enfocarse en lo que de verdad importa.",

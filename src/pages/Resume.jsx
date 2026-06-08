@@ -1,6 +1,8 @@
 import data from "../data/data.json";
 import ScrollSpy from "../components/ui/ScrollSpy";
 import { useLanguage } from "../context/LanguageContext";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import ResumePDF from "../components/ui/ResumePDF";
 
 export default function Resume() {
   const { lang } = useLanguage();
@@ -17,6 +19,8 @@ export default function Resume() {
     { id: "honors", label: t ? t.honors : "Honors & Recognition" },
     { id: "academic-projects", label: t ? t.projects : "Academic & Core Projects" }
   ];
+
+  const pdfFileName = lang === 'es' ? "Jan_Marte_CV.pdf" : "Jan_Marte_Resume.pdf";
 
   return (
     <div className="animate-fade-in text-left max-w-5xl mx-auto flex flex-col md:flex-row gap-8 md:gap-12 mt-4 md:mt-12 mb-24 relative">
@@ -36,12 +40,18 @@ export default function Resume() {
           </div>
           
           <div className="flex gap-3 mt-6 md:mt-0">
-            <a href="/Jan_Marte_Resume.pdf" download className="px-4 py-2 text-sm bg-[var(--cta-color)] text-white font-bold rounded shadow-lg shadow-[var(--cta-color)]/20 hover:scale-105 transition-transform flex items-center gap-2">
-              {t ? t.download : "Download PDF ↓"}
-            </a>
-            <a href="/Jan_Marte_Resume.pdf" target="_blank" rel="noreferrer" className="px-4 py-2 text-sm bg-[var(--btn-bg)] border border-[var(--card-border)] hover:border-[var(--accent-color)] rounded transition-colors flex items-center gap-2">
-              {t ? t.open : "Open in Tab ↗"}
-            </a>
+            {/* Live-generated PDF — always in sync with the data on this page */}
+            <PDFDownloadLink
+              document={<ResumePDF data={data} lang={lang} />}
+              fileName={pdfFileName}
+              className="px-4 py-2 text-sm bg-[var(--cta-color)] text-white font-bold rounded shadow-lg shadow-[var(--cta-color)]/20 hover:scale-105 transition-transform flex items-center gap-2"
+            >
+              {({ loading }) =>
+                loading
+                  ? (t ? "Generando…" : "Generating…")
+                  : (t ? t.download : "Download PDF ↓")
+              }
+            </PDFDownloadLink>
           </div>
         </div>
 
